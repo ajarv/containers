@@ -6,7 +6,7 @@ MINIO_ACCESS_KEY=brightangel
 MINIO_SECRET_KEY=northkaibab
 
 stop:
-	docker rm -f ${CONTAINER_NAME}
+	docker rm -f ${CONTAINER_NAME} || true
 run: stop
 	docker pull minio/minio:edge
 	docker run --rm -d --name ${CONTAINER_NAME} -p 9000:9000 \
