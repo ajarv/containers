@@ -98,7 +98,7 @@ func (f sortedDir) Open(name string) (http.File, error) {
 
 func main() {
 	// The directory to serve.
-	directory := flag.String("staticDir", "static/", "Static file directory")
+	directory := flag.String("staticDir", "/www/", "Static file directory")
 	flag.Parse()
 	// var dir = "/usr/local/www/data"
 	var d = sortedDir{d: http.Dir(*directory)}
