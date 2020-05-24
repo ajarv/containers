@@ -1,6 +1,7 @@
 
-IMAGE_NAME='m7dock/go-ran'
-CONTAINER_NAME='file-server-ran'
+IMAGE_NAME		=	'm7dock/go-ran'
+CONTAINER_NAME	=	'file-server-ran'
+ROOT_FOLDER 	= 	"${HOME}/www"
 
 build-container:
 	docker build -t ${IMAGE_NAME} .
@@ -11,8 +12,7 @@ stop:
 run: stop
 	docker run --rm -d --name ${CONTAINER_NAME} \
 	-p 18080:8080 \
-	-v ${HOME}/www:/www \
-	-v ${HOME}/music:/www/music \
+	-v $(ROOT_FOLDER)/www:/www \
 	${IMAGE_NAME} \
-	-r /www -cors=true -l 
+	-r /www -cors=true -l -nc 
  
