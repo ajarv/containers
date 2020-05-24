@@ -9,6 +9,10 @@ stop:
 	docker stop ${CONTAINER_NAME} || true
 
 run: stop
-	docker run --rm -d --name ${CONTAINER_NAME} -p 18080:8080 -v ${HOME}/www:/www ${IMAGE_NAME} \
+	docker run --rm -d --name ${CONTAINER_NAME} \
+	-p 18080:8080 \
+	-v ${HOME}/www:/www \
+	-v ${HOME}/music:/www/music \
+	${IMAGE_NAME} \
 	-r /www -cors=true -l 
  
