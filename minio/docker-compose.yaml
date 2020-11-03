@@ -1,7 +1,7 @@
 version: "3.7"
 
 services:
-  postgres:
+  minio:
       image: minio/minio:edge
       volumes:
         - ./data:/data
