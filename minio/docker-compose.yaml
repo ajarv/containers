@@ -1,0 +1,12 @@
+version: "3.7"
+
+services:
+  postgres:
+      image: minio/minio:edge
+      volumes:
+        - ./data:/data
+      environment:
+        MINIO_ACCESS_KEY: brightangel
+        MINIO_SECRET_KEY: northkaibab
+      ports:
+        - 9000:9000
