@@ -1,15 +1,31 @@
 version: "3.7"
 
 services:
+  # minio:
+  #     image: minio/minio:edge
+  #     volumes:
+  #       - ./data:/data
+  #     environment:
+  #       MINIO_ACCESS_KEY: brightangel
+  #       MINIO_SECRET_KEY: northkaibab
+  #     ports:
+  #       - 9000:9000
+  #     command:
+  #       - server
+  #       - /data
   minio:
-      image: minio/minio:edge
+      image: minio
       volumes:
-        - ./data:/data
+        - /var/lib/data/minio-data:/data
       environment:
         MINIO_ACCESS_KEY: brightangel
         MINIO_SECRET_KEY: northkaibab
+        #       MINIO_IDENTITY_OPENID_CONFIG_URL: https://dev-hsihsfug.us.auth0.com/.well-known/openid-configuration
+        #       MINIO_IDENTITY_OPENID_CLIENT_ID: CoaX8mi1vB75PxpcXz5poc0XnNl7Xo3G
+
       ports:
         - 9000:9000
       command:
         - server
         - /data
+
