@@ -14,5 +14,5 @@ run: stop
 	-p 8080:8080 \
 	-v ${ROOT_FOLDER}:/www \
 	${IMAGE_NAME} \
-	-r /www -cors=true -l -nc 
+	-staticDir /www -cors=true -l -nc 
  
