@@ -1,6 +1,6 @@
 
-IMAGE_NAME='m7dock/node-http-server'
-CONTAINER_NAME='file-server-castle'
+IMAGE_NAME=m7dock/node-http-server
+CONTAINER_NAME=file-server-castle
 
 build-container:
 	docker build -t ${IMAGE_NAME} .
