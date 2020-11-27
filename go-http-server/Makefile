@@ -12,7 +12,7 @@ stop:
 run: stop
 	docker run --rm -d --name ${CONTAINER_NAME} \
 	-p 8080:8080 \
-	-v $(ROOT_FOLDER):/www \
+	-v ${ROOT_FOLDER}:/www \
 	${IMAGE_NAME} \
 	-r /www -cors=true -l -nc 
  
