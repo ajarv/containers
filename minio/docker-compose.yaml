@@ -14,18 +14,32 @@ services:
   #       - server
   #       - /data
   minio:
-      image: minio
-      volumes:
-        - /var/lib/data/minio-data:/data
-      environment:
-        MINIO_ACCESS_KEY: brightangel
-        MINIO_SECRET_KEY: northkaibab
-        #       MINIO_IDENTITY_OPENID_CONFIG_URL: https://dev-hsihsfug.us.auth0.com/.well-known/openid-configuration
-        #       MINIO_IDENTITY_OPENID_CLIENT_ID: CoaX8mi1vB75PxpcXz5poc0XnNl7Xo3G
-
-      ports:
-        - 9000:9000
-      command:
-        - server
-        - /data
-
+    image: quay.io/minio/minio
+    restart: always 
+    volumes:
+      - /opt/data:/data
+      # - /mnt/ssd/data:/data
+      - ./certs:/root/.minio/certs
+    environment:
+      MINIO_DOMAIN: svc.t-1s.com 
+      MINIO_ACCESS_KEY: kalpa
+      MINIO_SECRET_KEY: rekongpeo
+      MINIO_API_CORS_ALLOW_ORIGIN: "https://svc.t-1s.com,https://svc.t-1s,http://localhost:9080,http://192.168.0.11:9080"
+      #       MINIO_IDENTITY_OPENID_CONFIG_URL: https://dev-hsihsfug.us.auth0.com/.well-known/openid-configuration
+      #       MINIO_IDENTITY_OPENID_CLIENT_ID: CoaX8mi1vB75PxpcXz5poc0XnNl7Xo3G
+    ports:
+      - 9000:9000
+      - 9001:9001
+    command:
+      - server
+      - /data
+      - --console-address
+      - "0.0.0.0:9001"
+  minio-listener:
+    build: ./listener
+    image: minio-flask
+    ports:
+      - "5000:5000"
+    volumes:
+      - /opt/data:/data
+      - /mnt/ssd/avashist/PhotoVault/vault:/data-out
