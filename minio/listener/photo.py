@@ -1,4 +1,3 @@
-
 import sys
 import piexif
 import time
@@ -50,7 +49,7 @@ def get_image_creation_date(image_source_path):
         return stamp
 
     time_stamp =  dateFromExifInfo() or dateFromFileName() or dateFromFileCTime()
-    
+
     return time_stamp
 
 def resize_image(source_path, dest_path,size, quality=85, sharpen=True,):
@@ -82,10 +81,6 @@ def resize_image(source_path, dest_path,size, quality=85, sharpen=True,):
     os.rename(_dest_path,dest_path)
     return True
 
-
-
-
-
 if __name__ == '__main__':
-    ts = get_image_creation_date_time(sys.argv[1])
+    ts = get_image_creation_date(sys.argv[1])
     print(ts)
