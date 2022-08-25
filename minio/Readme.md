@@ -13,7 +13,8 @@ docker run \
 
 
 ## Test
-docker build -t ptasks listener
+docker build -t ptasks ./listener
+docker run -it --rm -v /mnt/ssd/avashist/PhotoVault/vault:/data-out ptasks python my_tasks.py
 
 ```
 
@@ -32,3 +33,4 @@ mc event add minio/images arn:minio:sqs::1:webhook --event put --suffix .*
 
 
 
+MINIO_HOST=192.168.0.11 MINIO_PORT=9000 MINIO_ACCESS_KEY=kalpa MINIO_SECRET_KEY=rekongpeo node presign-server.js

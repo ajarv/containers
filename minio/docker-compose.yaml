@@ -1,30 +1,19 @@
 version: "3.7"
 
 services:
-  # minio:
-  #     image: minio/minio:edge
-  #     volumes:
-  #       - ./data:/data
-  #     environment:
-  #       MINIO_ACCESS_KEY: brightangel
-  #       MINIO_SECRET_KEY: northkaibab
-  #     ports:
-  #       - 9000:9000
-  #     command:
-  #       - server
-  #       - /data
   minio:
     image: quay.io/minio/minio
     restart: always 
     volumes:
-      - /opt/data:/data
+      # - /opt/data:/data
+      - /mnt/ssd/data:/data
       # - /mnt/ssd/data:/data
       - ./certs:/root/.minio/certs
     environment:
       MINIO_DOMAIN: svc.t-1s.com 
-      MINIO_ACCESS_KEY: kalpa
-      MINIO_SECRET_KEY: rekongpeo
-      MINIO_API_CORS_ALLOW_ORIGIN: "https://svc.t-1s.com,https://svc.t-1s,http://localhost:9080,http://192.168.0.11:9080"
+      MINIO_ROOT_USER: kalpa
+      MINIO_ROOT_PASSWORD: rekongpeo
+      MINIO_API_CORS_ALLOW_ORIGIN: "https://svc.t-1s.com,https://svc.t-1s,http://libra:9080,http://libra:9020"
       #       MINIO_IDENTITY_OPENID_CONFIG_URL: https://dev-hsihsfug.us.auth0.com/.well-known/openid-configuration
       #       MINIO_IDENTITY_OPENID_CLIENT_ID: CoaX8mi1vB75PxpcXz5poc0XnNl7Xo3G
     ports:
@@ -35,11 +24,56 @@ services:
       - /data
       - --console-address
       - "0.0.0.0:9001"
+  minio-back:
+    image: quay.io/minio/minio
+    restart: always 
+    volumes:
+      - /mnt/5tb/PhotoVault:/data
+      - ./certs:/root/.minio/certs
+    environment:
+      MINIO_ROOT_USER: kalpa
+      MINIO_ROOT_PASSWORD: rekongpeo
+      MINIO_API_CORS_ALLOW_ORIGIN: "https://svc.t-1s.com,https://svc.t-1s,http://libra:9020,http://libra:8080"
+      #       MINIO_IDENTITY_OPENID_CONFIG_URL: https://dev-hsihsfug.us.auth0.com/.well-known/openid-configuration
+      #       MINIO_IDENTITY_OPENID_CLIENT_ID: CoaX8mi1vB75PxpcXz5poc0XnNl7Xo3G
+    ports:
+      - 9002:9002
+      - 9003:9003
+    command:
+      - server
+      - /data
+      - --console-address
+      - ":9003"
+      - --address
+      -  ":9002"
   minio-listener:
     build: ./listener
     image: minio-flask
     ports:
       - "5000:5000"
     volumes:
-      - /opt/data:/data
-      - /mnt/ssd/avashist/PhotoVault/vault:/data-out
+      - /mnt/ssd/data:/data
+      - /mnt/5tb/PhotoVault/vault:/data-out
+  upload-server:
+    build: ./upload-server
+    image: upload-server
+    environment:
+      MINIO_ACCESS_KEY: kalpa
+      MINIO_SECRET_KEY: rekongpeo
+      MINIO_HOST: libra
+      MINIO_PORT: 9000
+    ports:
+      - "9020:8080"
+  http-server:
+    image: halverneus/static-file-server:latest
+    ports:
+      - "7001:8080"
+    volumes:
+      - /mnt/5tb/Photovault/vault:/web
+  rethinkdb:
+    image: rethinkdb:2.4
+    ports:
+      - 8060:8080
+      - 28015:28015
+    volumes:
+      - /opt/rethink-app:/app

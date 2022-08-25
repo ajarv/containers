@@ -1,0 +1,1003 @@
+
+
+Sat Feb 12 16:32:34 2022
+Command line: TestDisk
+
+TestDisk 7.1, Data Recovery Utility, July 2019
+Christophe GRENIER <grenier@cgsecurity.org>
+https://www.cgsecurity.org
+OS: Linux, kernel 5.4.0-99-generic (#112-Ubuntu SMP Thu Feb 3 13:50:55 UTC 2022) x86_64
+Compiler: GCC 9.2
+ext2fs lib: 1.45.5, ntfs lib: libntfs-3g, reiserfs lib: none, ewf lib: none, curses lib: ncurses 6.1
+/dev/sdc: LBA, HPA, LBA48, DCO support
+/dev/sdc: size       468862128 sectors
+/dev/sdc: user_max   468862128 sectors
+/dev/sdc: native_max 468862128 sectors
+/dev/sdc: dco        468862128 sectors
+Warning: can't get size for Disk /dev/mapper/control - 0 B - 0 sectors, sector size=512
+Warning: can't get size for Disk /dev/loop15 - 0 B - 0 sectors, sector size=512
+Hard disk list
+Disk /dev/sda - 5000 GB / 4657 GiB - CHS 608001 255 63, sector size=512 - Seagate BUP Portable, FW:1707
+Disk /dev/sdb - 1000 GB / 931 GiB - CHS 121601 255 63, sector size=512 - SanDisk SSD PLUS 1000GB
+Disk /dev/sdc - 240 GB / 223 GiB - CHS 29185 255 63, sector size=512 - PNY CS1311 240GB SSD, S/N:PNY2016217898020195D, FW:CS131122
+Disk /dev/loop0 - 168 MB / 160 MiB - 329624 sectors (RO), sector size=512
+Disk /dev/loop1 - 115 MB / 110 MiB - 226280 sectors (RO), sector size=512
+Disk /dev/loop10 - 55 MB / 53 MiB - 108840 sectors (RO), sector size=512
+Disk /dev/loop11 - 10 MB / 10 MiB - 21432 sectors (RO), sector size=512
+Disk /dev/loop12 - 191 MB / 182 MiB - 373120 sectors (RO), sector size=512
+Disk /dev/loop13 - 104 MB / 99 MiB - 203648 sectors (RO), sector size=512
+Disk /dev/loop14 - 64 MB / 61 MiB - 126792 sectors (RO), sector size=512
+Disk /dev/loop2 - 58 MB / 55 MiB - 113640 sectors (RO), sector size=512
+Disk /dev/loop3 - 64 MB / 61 MiB - 126784 sectors (RO), sector size=512
+Disk /dev/loop4 - 46 MB / 44 MiB - 91656 sectors (RO), sector size=512
+Disk /dev/loop5 - 58 MB / 55 MiB - 113680 sectors (RO), sector size=512
+Disk /dev/loop6 - 54 MB / 52 MiB - 106752 sectors (RO), sector size=512
+Disk /dev/loop7 - 106 MB / 101 MiB - 207968 sectors (RO), sector size=512
+Disk /dev/loop8 - 11 MB / 10 MiB - 21680 sectors (RO), sector size=512
+Disk /dev/loop9 - 191 MB / 182 MiB - 373128 sectors (RO), sector size=512
+
+Partition table type (auto): EFI GPT
+Disk /dev/sda - 5000 GB / 4657 GiB - Seagate BUP Portable
+Partition table type: EFI GPT
+
+Interface Advanced
+hdr_size=92
+hdr_lba_self=1
+hdr_lba_alt=9767541166 (expected 9767541166)
+hdr_lba_start=34
+hdr_lba_end=9767541133
+hdr_lba_table=2
+hdr_entries=128
+hdr_entsz=128
+ 1 P EFI System                    40     409639     409600 [EFI System Partition]
+ 2 P MS Data                   411648 9767540735 9767129088
+     exFAT, blocksize=262144, 5000 GB / 4657 GiB
+
+Directory /
+  389810 drwxr-xr-x     0      0    262144 28-Nov-2020 14:50 FOUND.000
+     142 drwxr-xr-x     0      0    262144 29-Dec-2021 22:08 data
+      14 -rwxr-xr-x     0      0    186658  8-Feb-2019 07:20 .VolumeIcon.icns
+      15 -rwxr-xr-x     0      0    175507  8-Feb-2019 07:20 .VolumeIcon.ico
+      16 -rwxr-xr-x     0      0      4096 16-Feb-2018 00:15 ._
+      17 -rwxr-xr-x     0      0        33 22-Feb-2018 00:20 Autorun.inf
+      18 -rwxr-xr-x     0      0  18033016  9-Feb-2018 06:45 Start_Here_Win.exe
+      87 -rwxr-xr-x     0      0   1172289 26-Jul-2018 15:31 Warranty.pdf
+      92 drwxr-xr-x     0      0    262144 29-Jun-2019 05:38 Seagate
+      94 drwxr-xr-x     0      0    262144 29-Jun-2019 05:38 Start_Here_Mac.app
+     134 drwxr-xr-x     0      0    262144 15-Jan-2020 20:29 System Volume Information
+ 6501505 -rwxr-xr-x     0      0     87557 12-Dec-2021 21:35 testdisk.log
+ 6501400 -rwxr-xr-x     0      0      8196  9-Jan-2022 17:19 .DS_Store
+ 6542512 -rwxr-xr-x     0      0      4096 29-Dec-2021 04:57 ._.DS_Store
+     137 -rwxr-xr-x     0      0        56 12-Jul-2020 14:19 .dropbox.device
+     138 drwxr-xr-x     0      0    262144  7-Feb-2022 16:44 Photovault
+     139 drwxr-xr-x     0      0    262144 12-Jul-2020 15:07 $RECYCLE.BIN
+X      0 -rwxr-xr-x     0      0         0 12-Feb-2022 15:54 .~.dropbox.external.writable
+X6815787 drwxr-xr-x     0      0    262144 12-Feb-2022 16:00 MSI85253.tmp
+X6815787 drwxr-xr-x     0      0    262144 12-Feb-2022 16:00 MSI85256.tmp
+X      0 -rwxr-xr-x     0      0         0 12-Feb-2022 16:04 .~.dropbox.external.writable
+Directory /Photovault
+     141 drwxr-xr-x     0      0    262144  6-Feb-2022 01:23 raw-in
+   59127 drwxr-xr-x     0      0    262144 12-Jul-2020 15:15 videos
+  655362 drwxr-xr-x     0      0    262144  7-Feb-2022 16:44 vault
+ 6542516 -rwxr-xr-x     0      0      6148 29-Dec-2021 05:03 .DS_Store
+    2678 -rwxr-xr-x     0      0      4096 14-Dec-2021 17:58 ._.DS_Store
+ 8052392 drwxr-xr-x     0      0    262144 24-Jan-2022 05:17 .minio.sys
+     147 drwxr-xr-x     0      0    262144 29-Dec-2021 05:03 to_delete
+    2679 drwxr-xr-x     0      0    262144 12-Feb-2022 22:57 vault_1
+Directory /Photovault/vault
+ 9026279 drwxr-xr-x     0      0    262144  8-Feb-2022 05:51 ORIGN
+ 6885780 -rwxr-xr-x     0      0   1620126 12-Feb-2022 10:46 ORIGN__list.json
+     146 drwxr-xr-x     0      0    262144 10-Feb-2022 19:08 S2000
+     153 drwxr-xr-x     0      0    262144 10-Feb-2022 19:08 S0300
+  681989 -rwxr-xr-x     0      0      1264 31-Jul-2021 18:47 index.html
+  681990 drwxr-xr-x     0      0    262144 31-Jul-2021 18:48 static
+ 6885787 -rwxr-xr-x     0      0   3209635 12-Feb-2022 10:47 S2000__list.json
+X    147 drwxr-xr-x     0      0    262144 29-Dec-2021 05:03 S2000_
+ 8368528 -rwxr-xr-x     0      0      6148  7-Feb-2022 01:31 .DS_Store
+ 6542519 -rwxr-xr-x     0      0      4096 29-Dec-2021 05:03 ._.DS_Store
+ 6542634 drwxr-xr-x     0      0    262144 11-Feb-2022 10:31 REJECT
+X   2679 drwxr-xr-x     0      0    262144 24-Jan-2022 04:23 vault
+X6542423 drwxr-xr-x     0      0    262144  5-Feb-2022 20:33 ORIGN_x
+X8354204 drwxr-xr-x     0      0    262144  5-Feb-2022 19:56 ox
+exfat_ucstoutf8: iconv failed Invalid or incomplete multibyte or wide character
+exfat_ucstoutf8: iconv failed Invalid or incomplete multibyte or wide character
+exfat_ucstoutf8: iconv failed Invalid or incomplete multibyte or wide character
+exfat_ucstoutf8: iconv failed Invalid or incomplete multibyte or wide character
+exfat_ucstoutf8: iconv failed Invalid or incomplete multibyte or wide character
+exfat_ucstoutf8: iconv failed Invalid or incomplete multibyte or wide character
+exfat_ucstoutf8: iconv failed Invalid or incomplete multibyte or wide character
+exfat_ucstoutf8: iconv failed Invalid or incomplete multibyte or wide character
+exfat_ucstoutf8: iconv failed Invalid or incomplete multibyte or wide character
+exfat_ucstoutf8: iconv failed Invalid or incomplete multibyte or wide character
+exfat_ucstoutf8: iconv failed Invalid or incomplete multibyte or wide character
+exfat_ucstoutf8: iconv failed Invalid or incomplete multibyte or wide character
+exfat_ucstoutf8: iconv failed Invalid or incomplete multibyte or wide character
+exfat_ucstoutf8: iconv failed Invalid or incomplete multibyte or wide character
+exfat_ucstoutf8: iconv failed Invalid or incomplete multibyte or wide character
+exfat_ucstoutf8: iconv failed Invalid or incomplete multibyte or wide character
+Directory /Photovault/vault/ORIGN
+X      0 -rwxr-xr-x     0      0         0 24-Jan-2036 02:54 鰱㟧ព⺸츘茋验驝櫬Ὄ塛ᓤ뀑珮
+       0 -rwxr-xr-x     0      0         0  8-Jan-1990 13:09 
+ 738569384 drwxr-xr-x     0      0 12982268699992273480 29-May-2006 17:05 2��`%=
+       0 drwxr-xr-x     0      0         0 26-May-1926 18:25 
+ 1633568600 dr-xr-xr-x     0      0 10925353159577261124 26-Oct-1929 22:48 �x;�Qy|�Sb���
+ 2027773121 -r-xr-xr-x     0      0 7924475972785564057 15-Dec-1994 08:01 
+X      0 dr-xr-xr-x     0      0         0 30-Jul-2007 09:01 
+       0 dr-xr-xr-x     0      0         0 28-Dec-1968 00:24 
+       0 drwxr-xr-x     0      0         0 12-Sep-2000 02:26 ij�3����͉
+ 2934083742 dr-xr-xr-x     0      0 1229383297332893256 29-Nov-1915 00:16 ᧦⨆ﭘ雗䠵髋⯙杬鿜쭏꯷
+X      0 dr-xr-xr-x     0      0         0  9-Oct-1990 23:02 葉ꀩ訪ֱ帛텀䡂躆Þ᫙㤨
+X2002803580 drwxr-xr-x     0      0 15610503732239302587 11-Jul-1985 01:59 _}����O�φ�����'��
+X      0 dr-xr-xr-x     0      0         0 26-Dec-1956 00:19 
+X      0 drwxr-xr-x     0      0         0 15-Jul-1970 04:30 
+X      0 drwxr-xr-x     0      0         0  1-Feb-1909 23:32 
+X1192416035 dr-xr-xr-x     0      0 9868538874099074942 20-Mar-2024 03:00 釚豘戤ڞ摨㕸ᖮ䌏럁鈋ꢨ溳֗覍⣅︺缒菗芼躬猰폞膓੯쒯෭ﵻ躯Ò
+X608335282 -rwxr-xr-x     0      0 12337879456126809776 30-Dec-1933 18:34 
+ 1460112940 dr-xr-xr-x     0      0 15473601066301366247 13-Dec-1929 01:58 㠂䝲ﰔ覷⢲瑰㚈潕ং⑮ม☢㙦Χ
+X      0 -rwxr-xr-x     0      0         0 26-Feb-1916 10:57 
+X      0 -r-xr-xr-x     0      0         0  2-Aug-1962 15:16 
+X206235670 dr-xr-xr-x     0      0 1957835271919912875 15-Apr-2029 04:19 替㣤쯧ဟ䪿₻⡢㽽钄ࡧ⣆疜럧
+X      0 -rwxr-xr-x     0      0         0 22-Dec-1965 12:34 
+       0 dr-xr-xr-x     0      0         0  2-Aug-1942 17:18 
+X      0 -rwxr-xr-x     0      0         0 15-Jan-2018 02:48 
+X      0 -rwxr-xr-x     0      0         0  1-May-1924 17:33 c\J�Q��,	��\՚
+X      0 -rwxr-xr-x     0      0         0 21-Jan-1913 05:16 
+ 2897723560 drwxr-xr-x     0      0 13830053829907851037 24-May-1910 14:00 7и��l_��z����
+X1346692845 dr-xr-xr-x     0      0 7372043479543203769  2-Mar-1911 02:36 髃嫜ꖳ䵻鋪龝濧읍Ṗ㜄❥韥泞뱗힖
+       0 drwxr-xr-x     0      0         0 21-Sep-1980 07:10 ꕓꙘ稐轺燓୑ャ鐠턮⇘詀縶쵶
+X      0 drwxr-xr-x     0      0         0 28-Jan-1980 20:44 
+X      0 drwxr-xr-x     0      0         0 10-Jan-2002 01:50 
+X4457528 -r-xr-xr-x     0      0 13197883318036853324 13-Jun-1941 05:15 
+ 2558215434 -rwxr-xr-x     0      0 7683898776625145207  7-Jan-1993 14:51 TUP 	�NƐ9_蜍羧絇扨䡹鹻シ鮝謌瘷鄩튚γ䉭
+X      0 -r-xr-xr-x     0      0         0 22-Aug-1999 06:37 ﹳ縖ᑙ㛆铲펝釥⛐㓪歇쾹䈪꿩奸
+X      0 -rwxr-xr-x     0      0         0 31-Aug-2030 14:42 롘䂹円ო䯇杘뱅祊뜆蚍軸䃨꒟᳠
+       0 drwxr-xr-x     0      0         0 21-Oct-1962 05:27 
+ 1231349405 -rwxr-xr-x     0      0 11165803470629335205  7-Mar-2033 09:48 ��b"�k�5�ߗ��v�\F�
+X1529953445 dr-xr-xr-x     0      0 13142773681420810661 11-Dec-1944 06:33 ቫ㺿䳋ᦋ큗䡴ꜵ釘䛼乳쾅늼墉弊
+       0 dr-xr-xr-x     0      0         0 10-Jul-1920 05:35 *��*-R�P�5s��<
+X      0 drwxr-xr-x     0      0         0 11-Aug-1971 21:53 
+ 2205663095 dr-xr-xr-x     0      0 268755104203754295 21-Jan-1983 06:21 WK
+X      0 dr-xr-xr-x     0      0         0  6-Dec-1949 23:01 
+X882225897 drwxr-xr-x     0      0 513294170969509511 10-Dec-1957 20:12 寥㐱舆弑叭픆梷攲푴ᄭ붮鍭‱듩띟➸ᆐ夵掍怢뫘桛㺥遟䯽ꊾି㲰
+X      0 drwxr-xr-x     0      0         0 16-Dec-1939 14:11 
+X503166562 drwxr-xr-x     0      0 2069589177697786096  6-Jan-2025 05:19 
+       0 dr-xr-xr-x     0      0         0  3-Dec-1913 18:29 
+X983790940 -rwxr-xr-x     0      0 15359310342969048594 10-Jan-1970 23:50 
+X      0 -r-xr-xr-x     0      0         0  5-Mar-2035 11:39 
+       0 dr-xr-xr-x     0      0         0 25-Oct-1964 22:22 
+X      0 dr-xr-xr-x     0      0         0 16-Dec-1952 02:03 
+X1998854408 drwxr-xr-x     0      0 11419745765377778915  5-Dec-1902 14:45 
+X      0 -r-xr-xr-x     0      0         0 13-Jul-1937 03:38 �?����D,)��
+X789598909 -r-xr-xr-x     0      0 15511019387064148530 17-Jan-1986 20:55 륭ൃ■塙㓼◥늟ォ몽Ό饃莵赕
+X      0 drwxr-xr-x     0      0         0  6-Dec-1940 05:52 
+X2431079192 drwxr-xr-x     0      0 9851935970986719399 18-Jan-2029 11:18 
+       0 -rwxr-xr-x     0      0         0 17-Oct-1923 08:54 
+ 2616304614 -rwxr-xr-x     0      0 9013055180414918208 31-Jan-2019 00:33 
+X3348996535 dr-xr-xr-x     0      0 4007200997699401708 22-May-1939 20:22 -�m��V�ˏ�M��
+X2109187126 -rwxr-xr-x     0      0 6934547064136036657  2-Mar-2036 13:02 
+X3078079130 -r-xr-xr-x     0      0 5639823710451797125 31-Aug-1985 00:53 쭞龐ᮦֆށ鑴䍰賦髗⁂ꯔ₼剢惱ܴᬕℒ➶ꆷ㫆싎䶢㘌☝継ᬢ糖ሎ떳
+       0 -rwxr-xr-x     0      0         0 26-Nov-1947 23:26 
+X      0 dr-xr-xr-x     0      0         0 10-Apr-2016 18:29 ᛯ嬮⪉䙿蘕珈㙫汬䄆䯥ஒ틓!��8]�"�2f����튌㮐Ⳓ`錬ᐢ鹯ॡ람ơ㻿_((3H���6��J
+Directory /Photovault/vault
+ 9026279 drwxr-xr-x     0      0    262144  8-Feb-2022 05:51 ORIGN
+ 6885780 -rwxr-xr-x     0      0   1620126 12-Feb-2022 10:46 ORIGN__list.json
+     146 drwxr-xr-x     0      0    262144 10-Feb-2022 19:08 S2000
+     153 drwxr-xr-x     0      0    262144 10-Feb-2022 19:08 S0300
+  681989 -rwxr-xr-x     0      0      1264 31-Jul-2021 18:47 index.html
+  681990 drwxr-xr-x     0      0    262144 31-Jul-2021 18:48 static
+ 6885787 -rwxr-xr-x     0      0   3209635 12-Feb-2022 10:47 S2000__list.json
+X    147 drwxr-xr-x     0      0    262144 29-Dec-2021 05:03 S2000_
+ 8368528 -rwxr-xr-x     0      0      6148  7-Feb-2022 01:31 .DS_Store
+ 6542519 -rwxr-xr-x     0      0      4096 29-Dec-2021 05:03 ._.DS_Store
+ 6542634 drwxr-xr-x     0      0    262144 11-Feb-2022 10:31 REJECT
+X   2679 drwxr-xr-x     0      0    262144 24-Jan-2022 04:23 vault
+X6542423 drwxr-xr-x     0      0    262144  5-Feb-2022 20:33 ORIGN_x
+X8354204 drwxr-xr-x     0      0    262144  5-Feb-2022 19:56 ox
+exfat_ucstoutf8: iconv failed Invalid or incomplete multibyte or wide character
+exfat_ucstoutf8: iconv failed Invalid or incomplete multibyte or wide character
+exfat_ucstoutf8: iconv failed Invalid or incomplete multibyte or wide character
+exfat_ucstoutf8: iconv failed Invalid or incomplete multibyte or wide character
+exfat_ucstoutf8: iconv failed Invalid or incomplete multibyte or wide character
+exfat_ucstoutf8: iconv failed Invalid or incomplete multibyte or wide character
+exfat_ucstoutf8: iconv failed Invalid or incomplete multibyte or wide character
+exfat_ucstoutf8: iconv failed Invalid or incomplete multibyte or wide character
+exfat_ucstoutf8: iconv failed Invalid or incomplete multibyte or wide character
+exfat_ucstoutf8: iconv failed Invalid or incomplete multibyte or wide character
+exfat_ucstoutf8: iconv failed Invalid or incomplete multibyte or wide character
+exfat_ucstoutf8: iconv failed Invalid or incomplete multibyte or wide character
+exfat_ucstoutf8: iconv failed Invalid or incomplete multibyte or wide character
+exfat_ucstoutf8: iconv failed Invalid or incomplete multibyte or wide character
+exfat_ucstoutf8: iconv failed Invalid or incomplete multibyte or wide character
+exfat_ucstoutf8: iconv failed Invalid or incomplete multibyte or wide character
+Directory /Photovault/vault/ORIGN
+X      0 -rwxr-xr-x     0      0         0 24-Jan-2036 02:54 鰱㟧ព⺸츘茋验驝櫬Ὄ塛ᓤ뀑珮
+       0 -rwxr-xr-x     0      0         0  8-Jan-1990 13:09 
+ 738569384 drwxr-xr-x     0      0 12982268699992273480 29-May-2006 17:05 2��`%=
+       0 drwxr-xr-x     0      0         0 26-May-1926 18:25 
+ 1633568600 dr-xr-xr-x     0      0 10925353159577261124 26-Oct-1929 22:48 �x;�Qy|�Sb���
+ 2027773121 -r-xr-xr-x     0      0 7924475972785564057 15-Dec-1994 08:01 
+X      0 dr-xr-xr-x     0      0         0 30-Jul-2007 09:01 
+       0 dr-xr-xr-x     0      0         0 28-Dec-1968 00:24 
+       0 drwxr-xr-x     0      0         0 12-Sep-2000 02:26 ij�3����͉
+ 2934083742 dr-xr-xr-x     0      0 1229383297332893256 29-Nov-1915 00:16 ᧦⨆ﭘ雗䠵髋⯙杬鿜쭏꯷
+X      0 dr-xr-xr-x     0      0         0  9-Oct-1990 23:02 葉ꀩ訪ֱ帛텀䡂躆Þ᫙㤨
+X2002803580 drwxr-xr-x     0      0 15610503732239302587 11-Jul-1985 01:59 _}����O�φ�����'��
+X      0 dr-xr-xr-x     0      0         0 26-Dec-1956 00:19 
+X      0 drwxr-xr-x     0      0         0 15-Jul-1970 04:30 
+X      0 drwxr-xr-x     0      0         0  1-Feb-1909 23:32 
+X1192416035 dr-xr-xr-x     0      0 9868538874099074942 20-Mar-2024 03:00 釚豘戤ڞ摨㕸ᖮ䌏럁鈋ꢨ溳֗覍⣅︺缒菗芼躬猰폞膓੯쒯෭ﵻ躯Ò
+X608335282 -rwxr-xr-x     0      0 12337879456126809776 30-Dec-1933 18:34 
+ 1460112940 dr-xr-xr-x     0      0 15473601066301366247 13-Dec-1929 01:58 㠂䝲ﰔ覷⢲瑰㚈潕ং⑮ม☢㙦Χ
+X      0 -rwxr-xr-x     0      0         0 26-Feb-1916 10:57 
+X      0 -r-xr-xr-x     0      0         0  2-Aug-1962 15:16 
+X206235670 dr-xr-xr-x     0      0 1957835271919912875 15-Apr-2029 04:19 替㣤쯧ဟ䪿₻⡢㽽钄ࡧ⣆疜럧
+X      0 -rwxr-xr-x     0      0         0 22-Dec-1965 12:34 
+       0 dr-xr-xr-x     0      0         0  2-Aug-1942 17:18 
+X      0 -rwxr-xr-x     0      0         0 15-Jan-2018 02:48 
+X      0 -rwxr-xr-x     0      0         0  1-May-1924 17:33 c\J�Q��,	��\՚
+X      0 -rwxr-xr-x     0      0         0 21-Jan-1913 05:16 
+ 2897723560 drwxr-xr-x     0      0 13830053829907851037 24-May-1910 14:00 7и��l_��z����
+X1346692845 dr-xr-xr-x     0      0 7372043479543203769  2-Mar-1911 02:36 髃嫜ꖳ䵻鋪龝濧읍Ṗ㜄❥韥泞뱗힖
+       0 drwxr-xr-x     0      0         0 21-Sep-1980 07:10 ꕓꙘ稐轺燓୑ャ鐠턮⇘詀縶쵶
+X      0 drwxr-xr-x     0      0         0 28-Jan-1980 20:44 
+X      0 drwxr-xr-x     0      0         0 10-Jan-2002 01:50 
+X4457528 -r-xr-xr-x     0      0 13197883318036853324 13-Jun-1941 05:15 
+ 2558215434 -rwxr-xr-x     0      0 7683898776625145207  7-Jan-1993 14:51 TUP 	�NƐ9_蜍羧絇扨䡹鹻シ鮝謌瘷鄩튚γ䉭
+X      0 -r-xr-xr-x     0      0         0 22-Aug-1999 06:37 ﹳ縖ᑙ㛆铲펝釥⛐㓪歇쾹䈪꿩奸
+X      0 -rwxr-xr-x     0      0         0 31-Aug-2030 14:42 롘䂹円ო䯇杘뱅祊뜆蚍軸䃨꒟᳠
+       0 drwxr-xr-x     0      0         0 21-Oct-1962 05:27 
+ 1231349405 -rwxr-xr-x     0      0 11165803470629335205  7-Mar-2033 09:48 ��b"�k�5�ߗ��v�\F�
+X1529953445 dr-xr-xr-x     0      0 13142773681420810661 11-Dec-1944 06:33 ቫ㺿䳋ᦋ큗䡴ꜵ釘䛼乳쾅늼墉弊
+       0 dr-xr-xr-x     0      0         0 10-Jul-1920 05:35 *��*-R�P�5s��<
+X      0 drwxr-xr-x     0      0         0 11-Aug-1971 21:53 
+ 2205663095 dr-xr-xr-x     0      0 268755104203754295 21-Jan-1983 06:21 WK
+X      0 dr-xr-xr-x     0      0         0  6-Dec-1949 23:01 
+X882225897 drwxr-xr-x     0      0 513294170969509511 10-Dec-1957 20:12 寥㐱舆弑叭픆梷攲푴ᄭ붮鍭‱듩띟➸ᆐ夵掍怢뫘桛㺥遟䯽ꊾି㲰
+X      0 drwxr-xr-x     0      0         0 16-Dec-1939 14:11 
+X503166562 drwxr-xr-x     0      0 2069589177697786096  6-Jan-2025 05:19 
+       0 dr-xr-xr-x     0      0         0  3-Dec-1913 18:29 
+X983790940 -rwxr-xr-x     0      0 15359310342969048594 10-Jan-1970 23:50 
+X      0 -r-xr-xr-x     0      0         0  5-Mar-2035 11:39 
+       0 dr-xr-xr-x     0      0         0 25-Oct-1964 22:22 
+X      0 dr-xr-xr-x     0      0         0 16-Dec-1952 02:03 
+X1998854408 drwxr-xr-x     0      0 11419745765377778915  5-Dec-1902 14:45 
+X      0 -r-xr-xr-x     0      0         0 13-Jul-1937 03:38 �?����D,)��
+X789598909 -r-xr-xr-x     0      0 15511019387064148530 17-Jan-1986 20:55 륭ൃ■塙㓼◥늟ォ몽Ό饃莵赕
+X      0 drwxr-xr-x     0      0         0  6-Dec-1940 05:52 
+X2431079192 drwxr-xr-x     0      0 9851935970986719399 18-Jan-2029 11:18 
+       0 -rwxr-xr-x     0      0         0 17-Oct-1923 08:54 
+ 2616304614 -rwxr-xr-x     0      0 9013055180414918208 31-Jan-2019 00:33 
+X3348996535 dr-xr-xr-x     0      0 4007200997699401708 22-May-1939 20:22 -�m��V�ˏ�M��
+X2109187126 -rwxr-xr-x     0      0 6934547064136036657  2-Mar-2036 13:02 
+X3078079130 -r-xr-xr-x     0      0 5639823710451797125 31-Aug-1985 00:53 쭞龐ᮦֆށ鑴䍰賦髗⁂ꯔ₼剢惱ܴᬕℒ➶ꆷ㫆싎䶢㘌☝継ᬢ糖ሎ떳
+       0 -rwxr-xr-x     0      0         0 26-Nov-1947 23:26 
+X      0 dr-xr-xr-x     0      0         0 10-Apr-2016 18:29 ᛯ嬮⪉䙿蘕珈㙫汬䄆䯥ஒ틓!��8]�"�2f����튌㮐Ⳓ`錬ᐢ鹯ॡ람ơ㻿_((3H���6��J
+exfat_ucstoutf8: iconv failed Invalid or incomplete multibyte or wide character
+exfat_ucstoutf8: iconv failed Invalid or incomplete multibyte or wide character
+exfat_ucstoutf8: iconv failed Invalid or incomplete multibyte or wide character
+exfat_ucstoutf8: iconv failed Invalid or incomplete multibyte or wide character
+exfat_ucstoutf8: iconv failed Invalid or incomplete multibyte or wide character
+exfat_ucstoutf8: iconv failed Invalid or incomplete multibyte or wide character
+exfat_ucstoutf8: iconv failed Invalid or incomplete multibyte or wide character
+exfat_ucstoutf8: iconv failed Invalid or incomplete multibyte or wide character
+exfat_ucstoutf8: iconv failed Invalid or incomplete multibyte or wide character
+exfat_ucstoutf8: iconv failed Invalid or incomplete multibyte or wide character
+exfat_ucstoutf8: iconv failed Invalid or incomplete multibyte or wide character
+exfat_ucstoutf8: iconv failed Invalid or incomplete multibyte or wide character
+exfat_ucstoutf8: iconv failed Invalid or incomplete multibyte or wide character
+exfat_ucstoutf8: iconv failed Invalid or incomplete multibyte or wide character
+exfat_ucstoutf8: iconv failed Invalid or incomplete multibyte or wide character
+exfat_ucstoutf8: iconv failed Invalid or incomplete multibyte or wide character
+Directory /Photovault/vault/ORIGN
+X      0 -rwxr-xr-x     0      0         0 24-Jan-2036 02:54 鰱㟧ព⺸츘茋验驝櫬Ὄ塛ᓤ뀑珮
+       0 -rwxr-xr-x     0      0         0  8-Jan-1990 13:09 
+ 738569384 drwxr-xr-x     0      0 12982268699992273480 29-May-2006 17:05 2��`%=
+       0 drwxr-xr-x     0      0         0 26-May-1926 18:25 
+ 1633568600 dr-xr-xr-x     0      0 10925353159577261124 26-Oct-1929 22:48 �x;�Qy|�Sb���
+ 2027773121 -r-xr-xr-x     0      0 7924475972785564057 15-Dec-1994 08:01 
+X      0 dr-xr-xr-x     0      0         0 30-Jul-2007 09:01 
+       0 dr-xr-xr-x     0      0         0 28-Dec-1968 00:24 
+       0 drwxr-xr-x     0      0         0 12-Sep-2000 02:26 ij�3����͉
+ 2934083742 dr-xr-xr-x     0      0 1229383297332893256 29-Nov-1915 00:16 ᧦⨆ﭘ雗䠵髋⯙杬鿜쭏꯷
+X      0 dr-xr-xr-x     0      0         0  9-Oct-1990 23:02 葉ꀩ訪ֱ帛텀䡂躆Þ᫙㤨
+X2002803580 drwxr-xr-x     0      0 15610503732239302587 11-Jul-1985 01:59 _}����O�φ�����'��
+X      0 dr-xr-xr-x     0      0         0 26-Dec-1956 00:19 
+X      0 drwxr-xr-x     0      0         0 15-Jul-1970 04:30 
+X      0 drwxr-xr-x     0      0         0  1-Feb-1909 23:32 
+X1192416035 dr-xr-xr-x     0      0 9868538874099074942 20-Mar-2024 03:00 釚豘戤ڞ摨㕸ᖮ䌏럁鈋ꢨ溳֗覍⣅︺缒菗芼躬猰폞膓੯쒯෭ﵻ躯Ò
+X608335282 -rwxr-xr-x     0      0 12337879456126809776 30-Dec-1933 18:34 
+ 1460112940 dr-xr-xr-x     0      0 15473601066301366247 13-Dec-1929 01:58 㠂䝲ﰔ覷⢲瑰㚈潕ং⑮ม☢㙦Χ
+X      0 -rwxr-xr-x     0      0         0 26-Feb-1916 10:57 
+X      0 -r-xr-xr-x     0      0         0  2-Aug-1962 15:16 
+X206235670 dr-xr-xr-x     0      0 1957835271919912875 15-Apr-2029 04:19 替㣤쯧ဟ䪿₻⡢㽽钄ࡧ⣆疜럧
+X      0 -rwxr-xr-x     0      0         0 22-Dec-1965 12:34 
+       0 dr-xr-xr-x     0      0         0  2-Aug-1942 17:18 
+X      0 -rwxr-xr-x     0      0         0 15-Jan-2018 02:48 
+X      0 -rwxr-xr-x     0      0         0  1-May-1924 17:33 c\J�Q��,	��\՚
+X      0 -rwxr-xr-x     0      0         0 21-Jan-1913 05:16 
+ 2897723560 drwxr-xr-x     0      0 13830053829907851037 24-May-1910 14:00 7и��l_��z����
+X1346692845 dr-xr-xr-x     0      0 7372043479543203769  2-Mar-1911 02:36 髃嫜ꖳ䵻鋪龝濧읍Ṗ㜄❥韥泞뱗힖
+       0 drwxr-xr-x     0      0         0 21-Sep-1980 07:10 ꕓꙘ稐轺燓୑ャ鐠턮⇘詀縶쵶
+X      0 drwxr-xr-x     0      0         0 28-Jan-1980 20:44 
+X      0 drwxr-xr-x     0      0         0 10-Jan-2002 01:50 
+X4457528 -r-xr-xr-x     0      0 13197883318036853324 13-Jun-1941 05:15 
+ 2558215434 -rwxr-xr-x     0      0 7683898776625145207  7-Jan-1993 14:51 TUP 	�NƐ9_蜍羧絇扨䡹鹻シ鮝謌瘷鄩튚γ䉭
+X      0 -r-xr-xr-x     0      0         0 22-Aug-1999 06:37 ﹳ縖ᑙ㛆铲펝釥⛐㓪歇쾹䈪꿩奸
+X      0 -rwxr-xr-x     0      0         0 31-Aug-2030 14:42 롘䂹円ო䯇杘뱅祊뜆蚍軸䃨꒟᳠
+       0 drwxr-xr-x     0      0         0 21-Oct-1962 05:27 
+ 1231349405 -rwxr-xr-x     0      0 11165803470629335205  7-Mar-2033 09:48 ��b"�k�5�ߗ��v�\F�
+X1529953445 dr-xr-xr-x     0      0 13142773681420810661 11-Dec-1944 06:33 ቫ㺿䳋ᦋ큗䡴ꜵ釘䛼乳쾅늼墉弊
+       0 dr-xr-xr-x     0      0         0 10-Jul-1920 05:35 *��*-R�P�5s��<
+X      0 drwxr-xr-x     0      0         0 11-Aug-1971 21:53 
+ 2205663095 dr-xr-xr-x     0      0 268755104203754295 21-Jan-1983 06:21 WK
+X      0 dr-xr-xr-x     0      0         0  6-Dec-1949 23:01 
+X882225897 drwxr-xr-x     0      0 513294170969509511 10-Dec-1957 20:12 寥㐱舆弑叭픆梷攲푴ᄭ붮鍭‱듩띟➸ᆐ夵掍怢뫘桛㺥遟䯽ꊾି㲰
+X      0 drwxr-xr-x     0      0         0 16-Dec-1939 14:11 
+X503166562 drwxr-xr-x     0      0 2069589177697786096  6-Jan-2025 05:19 
+       0 dr-xr-xr-x     0      0         0  3-Dec-1913 18:29 
+X983790940 -rwxr-xr-x     0      0 15359310342969048594 10-Jan-1970 23:50 
+X      0 -r-xr-xr-x     0      0         0  5-Mar-2035 11:39 
+       0 dr-xr-xr-x     0      0         0 25-Oct-1964 22:22 
+X      0 dr-xr-xr-x     0      0         0 16-Dec-1952 02:03 
+X1998854408 drwxr-xr-x     0      0 11419745765377778915  5-Dec-1902 14:45 
+X      0 -r-xr-xr-x     0      0         0 13-Jul-1937 03:38 �?����D,)��
+X789598909 -r-xr-xr-x     0      0 15511019387064148530 17-Jan-1986 20:55 륭ൃ■塙㓼◥늟ォ몽Ό饃莵赕
+X      0 drwxr-xr-x     0      0         0  6-Dec-1940 05:52 
+X2431079192 drwxr-xr-x     0      0 9851935970986719399 18-Jan-2029 11:18 
+       0 -rwxr-xr-x     0      0         0 17-Oct-1923 08:54 
+ 2616304614 -rwxr-xr-x     0      0 9013055180414918208 31-Jan-2019 00:33 
+X3348996535 dr-xr-xr-x     0      0 4007200997699401708 22-May-1939 20:22 -�m��V�ˏ�M��
+X2109187126 -rwxr-xr-x     0      0 6934547064136036657  2-Mar-2036 13:02 
+X3078079130 -r-xr-xr-x     0      0 5639823710451797125 31-Aug-1985 00:53 쭞龐ᮦֆށ鑴䍰賦髗⁂ꯔ₼剢惱ܴᬕℒ➶ꆷ㫆싎䶢㘌☝継ᬢ糖ሎ떳
+       0 -rwxr-xr-x     0      0         0 26-Nov-1947 23:26 
+X      0 dr-xr-xr-x     0      0         0 10-Apr-2016 18:29 ᛯ嬮⪉䙿蘕珈㙫汬䄆䯥ஒ틓!��8]�"�2f����튌㮐Ⳓ`錬ᐢ鹯ॡ람ơ㻿_((3H���6��J
+exfat_ucstoutf8: iconv failed Invalid or incomplete multibyte or wide character
+exfat_ucstoutf8: iconv failed Invalid or incomplete multibyte or wide character
+exfat_ucstoutf8: iconv failed Invalid or incomplete multibyte or wide character
+exfat_ucstoutf8: iconv failed Invalid or incomplete multibyte or wide character
+exfat_ucstoutf8: iconv failed Invalid or incomplete multibyte or wide character
+exfat_ucstoutf8: iconv failed Invalid or incomplete multibyte or wide character
+exfat_ucstoutf8: iconv failed Invalid or incomplete multibyte or wide character
+exfat_ucstoutf8: iconv failed Invalid or incomplete multibyte or wide character
+exfat_ucstoutf8: iconv failed Invalid or incomplete multibyte or wide character
+exfat_ucstoutf8: iconv failed Invalid or incomplete multibyte or wide character
+exfat_ucstoutf8: iconv failed Invalid or incomplete multibyte or wide character
+exfat_ucstoutf8: iconv failed Invalid or incomplete multibyte or wide character
+exfat_ucstoutf8: iconv failed Invalid or incomplete multibyte or wide character
+exfat_ucstoutf8: iconv failed Invalid or incomplete multibyte or wide character
+exfat_ucstoutf8: iconv failed Invalid or incomplete multibyte or wide character
+exfat_ucstoutf8: iconv failed Invalid or incomplete multibyte or wide character
+Directory /Photovault/vault/ORIGN
+X      0 -rwxr-xr-x     0      0         0 24-Jan-2036 02:54 鰱㟧ព⺸츘茋验驝櫬Ὄ塛ᓤ뀑珮
+       0 -rwxr-xr-x     0      0         0  8-Jan-1990 13:09 
+ 738569384 drwxr-xr-x     0      0 12982268699992273480 29-May-2006 17:05 2��`%=
+       0 drwxr-xr-x     0      0         0 26-May-1926 18:25 
+ 1633568600 dr-xr-xr-x     0      0 10925353159577261124 26-Oct-1929 22:48 �x;�Qy|�Sb���
+ 2027773121 -r-xr-xr-x     0      0 7924475972785564057 15-Dec-1994 08:01 
+X      0 dr-xr-xr-x     0      0         0 30-Jul-2007 09:01 
+       0 dr-xr-xr-x     0      0         0 28-Dec-1968 00:24 
+       0 drwxr-xr-x     0      0         0 12-Sep-2000 02:26 ij�3����͉
+ 2934083742 dr-xr-xr-x     0      0 1229383297332893256 29-Nov-1915 00:16 ᧦⨆ﭘ雗䠵髋⯙杬鿜쭏꯷
+X      0 dr-xr-xr-x     0      0         0  9-Oct-1990 23:02 葉ꀩ訪ֱ帛텀䡂躆Þ᫙㤨
+X2002803580 drwxr-xr-x     0      0 15610503732239302587 11-Jul-1985 01:59 _}����O�φ�����'��
+X      0 dr-xr-xr-x     0      0         0 26-Dec-1956 00:19 
+X      0 drwxr-xr-x     0      0         0 15-Jul-1970 04:30 
+X      0 drwxr-xr-x     0      0         0  1-Feb-1909 23:32 
+X1192416035 dr-xr-xr-x     0      0 9868538874099074942 20-Mar-2024 03:00 釚豘戤ڞ摨㕸ᖮ䌏럁鈋ꢨ溳֗覍⣅︺缒菗芼躬猰폞膓੯쒯෭ﵻ躯Ò
+X608335282 -rwxr-xr-x     0      0 12337879456126809776 30-Dec-1933 18:34 
+ 1460112940 dr-xr-xr-x     0      0 15473601066301366247 13-Dec-1929 01:58 㠂䝲ﰔ覷⢲瑰㚈潕ং⑮ม☢㙦Χ
+X      0 -rwxr-xr-x     0      0         0 26-Feb-1916 10:57 
+X      0 -r-xr-xr-x     0      0         0  2-Aug-1962 15:16 
+X206235670 dr-xr-xr-x     0      0 1957835271919912875 15-Apr-2029 04:19 替㣤쯧ဟ䪿₻⡢㽽钄ࡧ⣆疜럧
+X      0 -rwxr-xr-x     0      0         0 22-Dec-1965 12:34 
+       0 dr-xr-xr-x     0      0         0  2-Aug-1942 17:18 
+X      0 -rwxr-xr-x     0      0         0 15-Jan-2018 02:48 
+X      0 -rwxr-xr-x     0      0         0  1-May-1924 17:33 c\J�Q��,	��\՚
+X      0 -rwxr-xr-x     0      0         0 21-Jan-1913 05:16 
+ 2897723560 drwxr-xr-x     0      0 13830053829907851037 24-May-1910 14:00 7и��l_��z����
+X1346692845 dr-xr-xr-x     0      0 7372043479543203769  2-Mar-1911 02:36 髃嫜ꖳ䵻鋪龝濧읍Ṗ㜄❥韥泞뱗힖
+       0 drwxr-xr-x     0      0         0 21-Sep-1980 07:10 ꕓꙘ稐轺燓୑ャ鐠턮⇘詀縶쵶
+X      0 drwxr-xr-x     0      0         0 28-Jan-1980 20:44 
+X      0 drwxr-xr-x     0      0         0 10-Jan-2002 01:50 
+X4457528 -r-xr-xr-x     0      0 13197883318036853324 13-Jun-1941 05:15 
+ 2558215434 -rwxr-xr-x     0      0 7683898776625145207  7-Jan-1993 14:51 TUP 	�NƐ9_蜍羧絇扨䡹鹻シ鮝謌瘷鄩튚γ䉭
+X      0 -r-xr-xr-x     0      0         0 22-Aug-1999 06:37 ﹳ縖ᑙ㛆铲펝釥⛐㓪歇쾹䈪꿩奸
+X      0 -rwxr-xr-x     0      0         0 31-Aug-2030 14:42 롘䂹円ო䯇杘뱅祊뜆蚍軸䃨꒟᳠
+       0 drwxr-xr-x     0      0         0 21-Oct-1962 05:27 
+ 1231349405 -rwxr-xr-x     0      0 11165803470629335205  7-Mar-2033 09:48 ��b"�k�5�ߗ��v�\F�
+X1529953445 dr-xr-xr-x     0      0 13142773681420810661 11-Dec-1944 06:33 ቫ㺿䳋ᦋ큗䡴ꜵ釘䛼乳쾅늼墉弊
+       0 dr-xr-xr-x     0      0         0 10-Jul-1920 05:35 *��*-R�P�5s��<
+X      0 drwxr-xr-x     0      0         0 11-Aug-1971 21:53 
+ 2205663095 dr-xr-xr-x     0      0 268755104203754295 21-Jan-1983 06:21 WK
+X      0 dr-xr-xr-x     0      0         0  6-Dec-1949 23:01 
+X882225897 drwxr-xr-x     0      0 513294170969509511 10-Dec-1957 20:12 寥㐱舆弑叭픆梷攲푴ᄭ붮鍭‱듩띟➸ᆐ夵掍怢뫘桛㺥遟䯽ꊾି㲰
+X      0 drwxr-xr-x     0      0         0 16-Dec-1939 14:11 
+X503166562 drwxr-xr-x     0      0 2069589177697786096  6-Jan-2025 05:19 
+       0 dr-xr-xr-x     0      0         0  3-Dec-1913 18:29 
+X983790940 -rwxr-xr-x     0      0 15359310342969048594 10-Jan-1970 23:50 
+X      0 -r-xr-xr-x     0      0         0  5-Mar-2035 11:39 
+       0 dr-xr-xr-x     0      0         0 25-Oct-1964 22:22 
+X      0 dr-xr-xr-x     0      0         0 16-Dec-1952 02:03 
+X1998854408 drwxr-xr-x     0      0 11419745765377778915  5-Dec-1902 14:45 
+X      0 -r-xr-xr-x     0      0         0 13-Jul-1937 03:38 �?����D,)��
+X789598909 -r-xr-xr-x     0      0 15511019387064148530 17-Jan-1986 20:55 륭ൃ■塙㓼◥늟ォ몽Ό饃莵赕
+X      0 drwxr-xr-x     0      0         0  6-Dec-1940 05:52 
+X2431079192 drwxr-xr-x     0      0 9851935970986719399 18-Jan-2029 11:18 
+       0 -rwxr-xr-x     0      0         0 17-Oct-1923 08:54 
+ 2616304614 -rwxr-xr-x     0      0 9013055180414918208 31-Jan-2019 00:33 
+X3348996535 dr-xr-xr-x     0      0 4007200997699401708 22-May-1939 20:22 -�m��V�ˏ�M��
+X2109187126 -rwxr-xr-x     0      0 6934547064136036657  2-Mar-2036 13:02 
+X3078079130 -r-xr-xr-x     0      0 5639823710451797125 31-Aug-1985 00:53 쭞龐ᮦֆށ鑴䍰賦髗⁂ꯔ₼剢惱ܴᬕℒ➶ꆷ㫆싎䶢㘌☝継ᬢ糖ሎ떳
+       0 -rwxr-xr-x     0      0         0 26-Nov-1947 23:26 
+X      0 dr-xr-xr-x     0      0         0 10-Apr-2016 18:29 ᛯ嬮⪉䙿蘕珈㙫汬䄆䯥ஒ틓!��8]�"�2f����튌㮐Ⳓ`錬ᐢ鹯ॡ람ơ㻿_((3H���6��J
+exfat_ucstoutf8: iconv failed Invalid or incomplete multibyte or wide character
+exfat_ucstoutf8: iconv failed Invalid or incomplete multibyte or wide character
+exfat_ucstoutf8: iconv failed Invalid or incomplete multibyte or wide character
+exfat_ucstoutf8: iconv failed Invalid or incomplete multibyte or wide character
+exfat_ucstoutf8: iconv failed Invalid or incomplete multibyte or wide character
+exfat_ucstoutf8: iconv failed Invalid or incomplete multibyte or wide character
+exfat_ucstoutf8: iconv failed Invalid or incomplete multibyte or wide character
+exfat_ucstoutf8: iconv failed Invalid or incomplete multibyte or wide character
+exfat_ucstoutf8: iconv failed Invalid or incomplete multibyte or wide character
+exfat_ucstoutf8: iconv failed Invalid or incomplete multibyte or wide character
+exfat_ucstoutf8: iconv failed Invalid or incomplete multibyte or wide character
+exfat_ucstoutf8: iconv failed Invalid or incomplete multibyte or wide character
+exfat_ucstoutf8: iconv failed Invalid or incomplete multibyte or wide character
+exfat_ucstoutf8: iconv failed Invalid or incomplete multibyte or wide character
+exfat_ucstoutf8: iconv failed Invalid or incomplete multibyte or wide character
+exfat_ucstoutf8: iconv failed Invalid or incomplete multibyte or wide character
+Directory /Photovault/vault/ORIGN
+X      0 -rwxr-xr-x     0      0         0 24-Jan-2036 02:54 鰱㟧ព⺸츘茋验驝櫬Ὄ塛ᓤ뀑珮
+       0 -rwxr-xr-x     0      0         0  8-Jan-1990 13:09 
+ 738569384 drwxr-xr-x     0      0 12982268699992273480 29-May-2006 17:05 2��`%=
+       0 drwxr-xr-x     0      0         0 26-May-1926 18:25 
+ 1633568600 dr-xr-xr-x     0      0 10925353159577261124 26-Oct-1929 22:48 �x;�Qy|�Sb���
+ 2027773121 -r-xr-xr-x     0      0 7924475972785564057 15-Dec-1994 08:01 
+X      0 dr-xr-xr-x     0      0         0 30-Jul-2007 09:01 
+       0 dr-xr-xr-x     0      0         0 28-Dec-1968 00:24 
+       0 drwxr-xr-x     0      0         0 12-Sep-2000 02:26 ij�3����͉
+ 2934083742 dr-xr-xr-x     0      0 1229383297332893256 29-Nov-1915 00:16 ᧦⨆ﭘ雗䠵髋⯙杬鿜쭏꯷
+X      0 dr-xr-xr-x     0      0         0  9-Oct-1990 23:02 葉ꀩ訪ֱ帛텀䡂躆Þ᫙㤨
+X2002803580 drwxr-xr-x     0      0 15610503732239302587 11-Jul-1985 01:59 _}����O�φ�����'��
+X      0 dr-xr-xr-x     0      0         0 26-Dec-1956 00:19 
+X      0 drwxr-xr-x     0      0         0 15-Jul-1970 04:30 
+X      0 drwxr-xr-x     0      0         0  1-Feb-1909 23:32 
+X1192416035 dr-xr-xr-x     0      0 9868538874099074942 20-Mar-2024 03:00 釚豘戤ڞ摨㕸ᖮ䌏럁鈋ꢨ溳֗覍⣅︺缒菗芼躬猰폞膓੯쒯෭ﵻ躯Ò
+X608335282 -rwxr-xr-x     0      0 12337879456126809776 30-Dec-1933 18:34 
+ 1460112940 dr-xr-xr-x     0      0 15473601066301366247 13-Dec-1929 01:58 㠂䝲ﰔ覷⢲瑰㚈潕ং⑮ม☢㙦Χ
+X      0 -rwxr-xr-x     0      0         0 26-Feb-1916 10:57 
+X      0 -r-xr-xr-x     0      0         0  2-Aug-1962 15:16 
+X206235670 dr-xr-xr-x     0      0 1957835271919912875 15-Apr-2029 04:19 替㣤쯧ဟ䪿₻⡢㽽钄ࡧ⣆疜럧
+X      0 -rwxr-xr-x     0      0         0 22-Dec-1965 12:34 
+       0 dr-xr-xr-x     0      0         0  2-Aug-1942 17:18 
+X      0 -rwxr-xr-x     0      0         0 15-Jan-2018 02:48 
+X      0 -rwxr-xr-x     0      0         0  1-May-1924 17:33 c\J�Q��,	��\՚
+X      0 -rwxr-xr-x     0      0         0 21-Jan-1913 05:16 
+ 2897723560 drwxr-xr-x     0      0 13830053829907851037 24-May-1910 14:00 7и��l_��z����
+X1346692845 dr-xr-xr-x     0      0 7372043479543203769  2-Mar-1911 02:36 髃嫜ꖳ䵻鋪龝濧읍Ṗ㜄❥韥泞뱗힖
+       0 drwxr-xr-x     0      0         0 21-Sep-1980 07:10 ꕓꙘ稐轺燓୑ャ鐠턮⇘詀縶쵶
+X      0 drwxr-xr-x     0      0         0 28-Jan-1980 20:44 
+X      0 drwxr-xr-x     0      0         0 10-Jan-2002 01:50 
+X4457528 -r-xr-xr-x     0      0 13197883318036853324 13-Jun-1941 05:15 
+ 2558215434 -rwxr-xr-x     0      0 7683898776625145207  7-Jan-1993 14:51 TUP 	�NƐ9_蜍羧絇扨䡹鹻シ鮝謌瘷鄩튚γ䉭
+X      0 -r-xr-xr-x     0      0         0 22-Aug-1999 06:37 ﹳ縖ᑙ㛆铲펝釥⛐㓪歇쾹䈪꿩奸
+X      0 -rwxr-xr-x     0      0         0 31-Aug-2030 14:42 롘䂹円ო䯇杘뱅祊뜆蚍軸䃨꒟᳠
+       0 drwxr-xr-x     0      0         0 21-Oct-1962 05:27 
+ 1231349405 -rwxr-xr-x     0      0 11165803470629335205  7-Mar-2033 09:48 ��b"�k�5�ߗ��v�\F�
+X1529953445 dr-xr-xr-x     0      0 13142773681420810661 11-Dec-1944 06:33 ቫ㺿䳋ᦋ큗䡴ꜵ釘䛼乳쾅늼墉弊
+       0 dr-xr-xr-x     0      0         0 10-Jul-1920 05:35 *��*-R�P�5s��<
+X      0 drwxr-xr-x     0      0         0 11-Aug-1971 21:53 
+ 2205663095 dr-xr-xr-x     0      0 268755104203754295 21-Jan-1983 06:21 WK
+X      0 dr-xr-xr-x     0      0         0  6-Dec-1949 23:01 
+X882225897 drwxr-xr-x     0      0 513294170969509511 10-Dec-1957 20:12 寥㐱舆弑叭픆梷攲푴ᄭ붮鍭‱듩띟➸ᆐ夵掍怢뫘桛㺥遟䯽ꊾି㲰
+X      0 drwxr-xr-x     0      0         0 16-Dec-1939 14:11 
+X503166562 drwxr-xr-x     0      0 2069589177697786096  6-Jan-2025 05:19 
+       0 dr-xr-xr-x     0      0         0  3-Dec-1913 18:29 
+X983790940 -rwxr-xr-x     0      0 15359310342969048594 10-Jan-1970 23:50 
+X      0 -r-xr-xr-x     0      0         0  5-Mar-2035 11:39 
+       0 dr-xr-xr-x     0      0         0 25-Oct-1964 22:22 
+X      0 dr-xr-xr-x     0      0         0 16-Dec-1952 02:03 
+X1998854408 drwxr-xr-x     0      0 11419745765377778915  5-Dec-1902 14:45 
+X      0 -r-xr-xr-x     0      0         0 13-Jul-1937 03:38 �?����D,)��
+X789598909 -r-xr-xr-x     0      0 15511019387064148530 17-Jan-1986 20:55 륭ൃ■塙㓼◥늟ォ몽Ό饃莵赕
+X      0 drwxr-xr-x     0      0         0  6-Dec-1940 05:52 
+X2431079192 drwxr-xr-x     0      0 9851935970986719399 18-Jan-2029 11:18 
+       0 -rwxr-xr-x     0      0         0 17-Oct-1923 08:54 
+ 2616304614 -rwxr-xr-x     0      0 9013055180414918208 31-Jan-2019 00:33 
+X3348996535 dr-xr-xr-x     0      0 4007200997699401708 22-May-1939 20:22 -�m��V�ˏ�M��
+X2109187126 -rwxr-xr-x     0      0 6934547064136036657  2-Mar-2036 13:02 
+X3078079130 -r-xr-xr-x     0      0 5639823710451797125 31-Aug-1985 00:53 쭞龐ᮦֆށ鑴䍰賦髗⁂ꯔ₼剢惱ܴᬕℒ➶ꆷ㫆싎䶢㘌☝継ᬢ糖ሎ떳
+       0 -rwxr-xr-x     0      0         0 26-Nov-1947 23:26 
+X      0 dr-xr-xr-x     0      0         0 10-Apr-2016 18:29 ᛯ嬮⪉䙿蘕珈㙫汬䄆䯥ஒ틓!��8]�"�2f����튌㮐Ⳓ`錬ᐢ鹯ॡ람ơ㻿_((3H���6��J
+Directory /Photovault/vault
+ 9026279 drwxr-xr-x     0      0    262144  8-Feb-2022 05:51 ORIGN
+ 6885780 -rwxr-xr-x     0      0   1620126 12-Feb-2022 10:46 ORIGN__list.json
+     146 drwxr-xr-x     0      0    262144 10-Feb-2022 19:08 S2000
+     153 drwxr-xr-x     0      0    262144 10-Feb-2022 19:08 S0300
+  681989 -rwxr-xr-x     0      0      1264 31-Jul-2021 18:47 index.html
+  681990 drwxr-xr-x     0      0    262144 31-Jul-2021 18:48 static
+ 6885787 -rwxr-xr-x     0      0   3209635 12-Feb-2022 10:47 S2000__list.json
+X    147 drwxr-xr-x     0      0    262144 29-Dec-2021 05:03 S2000_
+ 8368528 -rwxr-xr-x     0      0      6148  7-Feb-2022 01:31 .DS_Store
+ 6542519 -rwxr-xr-x     0      0      4096 29-Dec-2021 05:03 ._.DS_Store
+ 6542634 drwxr-xr-x     0      0    262144 11-Feb-2022 10:31 REJECT
+X   2679 drwxr-xr-x     0      0    262144 24-Jan-2022 04:23 vault
+X6542423 drwxr-xr-x     0      0    262144  5-Feb-2022 20:33 ORIGN_x
+X8354204 drwxr-xr-x     0      0    262144  5-Feb-2022 19:56 ox
+exfat_ucstoutf8: iconv failed Invalid or incomplete multibyte or wide character
+exfat_ucstoutf8: iconv failed Invalid or incomplete multibyte or wide character
+exfat_ucstoutf8: iconv failed Invalid or incomplete multibyte or wide character
+exfat_ucstoutf8: iconv failed Invalid or incomplete multibyte or wide character
+exfat_ucstoutf8: iconv failed Invalid or incomplete multibyte or wide character
+exfat_ucstoutf8: iconv failed Invalid or incomplete multibyte or wide character
+exfat_ucstoutf8: iconv failed Invalid or incomplete multibyte or wide character
+exfat_ucstoutf8: iconv failed Invalid or incomplete multibyte or wide character
+exfat_ucstoutf8: iconv failed Invalid or incomplete multibyte or wide character
+exfat_ucstoutf8: iconv failed Invalid or incomplete multibyte or wide character
+exfat_ucstoutf8: iconv failed Invalid or incomplete multibyte or wide character
+exfat_ucstoutf8: iconv failed Invalid or incomplete multibyte or wide character
+exfat_ucstoutf8: iconv failed Invalid or incomplete multibyte or wide character
+exfat_ucstoutf8: iconv failed Invalid or incomplete multibyte or wide character
+exfat_ucstoutf8: iconv failed Invalid or incomplete multibyte or wide character
+exfat_ucstoutf8: iconv failed Invalid or incomplete multibyte or wide character
+Directory /Photovault/vault/ORIGN
+X      0 -rwxr-xr-x     0      0         0 24-Jan-2036 02:54 鰱㟧ព⺸츘茋验驝櫬Ὄ塛ᓤ뀑珮
+       0 -rwxr-xr-x     0      0         0  8-Jan-1990 13:09 
+ 738569384 drwxr-xr-x     0      0 12982268699992273480 29-May-2006 17:05 2��`%=
+       0 drwxr-xr-x     0      0         0 26-May-1926 18:25 
+ 1633568600 dr-xr-xr-x     0      0 10925353159577261124 26-Oct-1929 22:48 �x;�Qy|�Sb���
+ 2027773121 -r-xr-xr-x     0      0 7924475972785564057 15-Dec-1994 08:01 
+X      0 dr-xr-xr-x     0      0         0 30-Jul-2007 09:01 
+       0 dr-xr-xr-x     0      0         0 28-Dec-1968 00:24 
+       0 drwxr-xr-x     0      0         0 12-Sep-2000 02:26 ij�3����͉
+ 2934083742 dr-xr-xr-x     0      0 1229383297332893256 29-Nov-1915 00:16 ᧦⨆ﭘ雗䠵髋⯙杬鿜쭏꯷
+X      0 dr-xr-xr-x     0      0         0  9-Oct-1990 23:02 葉ꀩ訪ֱ帛텀䡂躆Þ᫙㤨
+X2002803580 drwxr-xr-x     0      0 15610503732239302587 11-Jul-1985 01:59 _}����O�φ�����'��
+X      0 dr-xr-xr-x     0      0         0 26-Dec-1956 00:19 
+X      0 drwxr-xr-x     0      0         0 15-Jul-1970 04:30 
+X      0 drwxr-xr-x     0      0         0  1-Feb-1909 23:32 
+X1192416035 dr-xr-xr-x     0      0 9868538874099074942 20-Mar-2024 03:00 釚豘戤ڞ摨㕸ᖮ䌏럁鈋ꢨ溳֗覍⣅︺缒菗芼躬猰폞膓੯쒯෭ﵻ躯Ò
+X608335282 -rwxr-xr-x     0      0 12337879456126809776 30-Dec-1933 18:34 
+ 1460112940 dr-xr-xr-x     0      0 15473601066301366247 13-Dec-1929 01:58 㠂䝲ﰔ覷⢲瑰㚈潕ং⑮ม☢㙦Χ
+X      0 -rwxr-xr-x     0      0         0 26-Feb-1916 10:57 
+X      0 -r-xr-xr-x     0      0         0  2-Aug-1962 15:16 
+X206235670 dr-xr-xr-x     0      0 1957835271919912875 15-Apr-2029 04:19 替㣤쯧ဟ䪿₻⡢㽽钄ࡧ⣆疜럧
+X      0 -rwxr-xr-x     0      0         0 22-Dec-1965 12:34 
+       0 dr-xr-xr-x     0      0         0  2-Aug-1942 17:18 
+X      0 -rwxr-xr-x     0      0         0 15-Jan-2018 02:48 
+X      0 -rwxr-xr-x     0      0         0  1-May-1924 17:33 c\J�Q��,	��\՚
+X      0 -rwxr-xr-x     0      0         0 21-Jan-1913 05:16 
+ 2897723560 drwxr-xr-x     0      0 13830053829907851037 24-May-1910 14:00 7и��l_��z����
+X1346692845 dr-xr-xr-x     0      0 7372043479543203769  2-Mar-1911 02:36 髃嫜ꖳ䵻鋪龝濧읍Ṗ㜄❥韥泞뱗힖
+       0 drwxr-xr-x     0      0         0 21-Sep-1980 07:10 ꕓꙘ稐轺燓୑ャ鐠턮⇘詀縶쵶
+X      0 drwxr-xr-x     0      0         0 28-Jan-1980 20:44 
+X      0 drwxr-xr-x     0      0         0 10-Jan-2002 01:50 
+X4457528 -r-xr-xr-x     0      0 13197883318036853324 13-Jun-1941 05:15 
+ 2558215434 -rwxr-xr-x     0      0 7683898776625145207  7-Jan-1993 14:51 TUP 	�NƐ9_蜍羧絇扨䡹鹻シ鮝謌瘷鄩튚γ䉭
+X      0 -r-xr-xr-x     0      0         0 22-Aug-1999 06:37 ﹳ縖ᑙ㛆铲펝釥⛐㓪歇쾹䈪꿩奸
+X      0 -rwxr-xr-x     0      0         0 31-Aug-2030 14:42 롘䂹円ო䯇杘뱅祊뜆蚍軸䃨꒟᳠
+       0 drwxr-xr-x     0      0         0 21-Oct-1962 05:27 
+ 1231349405 -rwxr-xr-x     0      0 11165803470629335205  7-Mar-2033 09:48 ��b"�k�5�ߗ��v�\F�
+X1529953445 dr-xr-xr-x     0      0 13142773681420810661 11-Dec-1944 06:33 ቫ㺿䳋ᦋ큗䡴ꜵ釘䛼乳쾅늼墉弊
+       0 dr-xr-xr-x     0      0         0 10-Jul-1920 05:35 *��*-R�P�5s��<
+X      0 drwxr-xr-x     0      0         0 11-Aug-1971 21:53 
+ 2205663095 dr-xr-xr-x     0      0 268755104203754295 21-Jan-1983 06:21 WK
+X      0 dr-xr-xr-x     0      0         0  6-Dec-1949 23:01 
+X882225897 drwxr-xr-x     0      0 513294170969509511 10-Dec-1957 20:12 寥㐱舆弑叭픆梷攲푴ᄭ붮鍭‱듩띟➸ᆐ夵掍怢뫘桛㺥遟䯽ꊾି㲰
+X      0 drwxr-xr-x     0      0         0 16-Dec-1939 14:11 
+X503166562 drwxr-xr-x     0      0 2069589177697786096  6-Jan-2025 05:19 
+       0 dr-xr-xr-x     0      0         0  3-Dec-1913 18:29 
+X983790940 -rwxr-xr-x     0      0 15359310342969048594 10-Jan-1970 23:50 
+X      0 -r-xr-xr-x     0      0         0  5-Mar-2035 11:39 
+       0 dr-xr-xr-x     0      0         0 25-Oct-1964 22:22 
+X      0 dr-xr-xr-x     0      0         0 16-Dec-1952 02:03 
+X1998854408 drwxr-xr-x     0      0 11419745765377778915  5-Dec-1902 14:45 
+X      0 -r-xr-xr-x     0      0         0 13-Jul-1937 03:38 �?����D,)��
+X789598909 -r-xr-xr-x     0      0 15511019387064148530 17-Jan-1986 20:55 륭ൃ■塙㓼◥늟ォ몽Ό饃莵赕
+X      0 drwxr-xr-x     0      0         0  6-Dec-1940 05:52 
+X2431079192 drwxr-xr-x     0      0 9851935970986719399 18-Jan-2029 11:18 
+       0 -rwxr-xr-x     0      0         0 17-Oct-1923 08:54 
+ 2616304614 -rwxr-xr-x     0      0 9013055180414918208 31-Jan-2019 00:33 
+X3348996535 dr-xr-xr-x     0      0 4007200997699401708 22-May-1939 20:22 -�m��V�ˏ�M��
+X2109187126 -rwxr-xr-x     0      0 6934547064136036657  2-Mar-2036 13:02 
+X3078079130 -r-xr-xr-x     0      0 5639823710451797125 31-Aug-1985 00:53 쭞龐ᮦֆށ鑴䍰賦髗⁂ꯔ₼剢惱ܴᬕℒ➶ꆷ㫆싎䶢㘌☝継ᬢ糖ሎ떳
+       0 -rwxr-xr-x     0      0         0 26-Nov-1947 23:26 
+X      0 dr-xr-xr-x     0      0         0 10-Apr-2016 18:29 ᛯ嬮⪉䙿蘕珈㙫汬䄆䯥ஒ틓!��8]�"�2f����튌㮐Ⳓ`錬ᐢ鹯ॡ람ơ㻿_((3H���6��J
+exfat_ucstoutf8: iconv failed Invalid or incomplete multibyte or wide character
+exfat_ucstoutf8: iconv failed Invalid or incomplete multibyte or wide character
+exfat_ucstoutf8: iconv failed Invalid or incomplete multibyte or wide character
+exfat_ucstoutf8: iconv failed Invalid or incomplete multibyte or wide character
+exfat_ucstoutf8: iconv failed Invalid or incomplete multibyte or wide character
+exfat_ucstoutf8: iconv failed Invalid or incomplete multibyte or wide character
+exfat_ucstoutf8: iconv failed Invalid or incomplete multibyte or wide character
+exfat_ucstoutf8: iconv failed Invalid or incomplete multibyte or wide character
+exfat_ucstoutf8: iconv failed Invalid or incomplete multibyte or wide character
+exfat_ucstoutf8: iconv failed Invalid or incomplete multibyte or wide character
+exfat_ucstoutf8: iconv failed Invalid or incomplete multibyte or wide character
+exfat_ucstoutf8: iconv failed Invalid or incomplete multibyte or wide character
+exfat_ucstoutf8: iconv failed Invalid or incomplete multibyte or wide character
+exfat_ucstoutf8: iconv failed Invalid or incomplete multibyte or wide character
+exfat_ucstoutf8: iconv failed Invalid or incomplete multibyte or wide character
+exfat_ucstoutf8: iconv failed Invalid or incomplete multibyte or wide character
+Directory /Photovault/vault/ORIGN
+X      0 -rwxr-xr-x     0      0         0 24-Jan-2036 02:54 鰱㟧ព⺸츘茋验驝櫬Ὄ塛ᓤ뀑珮
+       0 -rwxr-xr-x     0      0         0  8-Jan-1990 13:09 
+ 738569384 drwxr-xr-x     0      0 12982268699992273480 29-May-2006 17:05 2��`%=
+       0 drwxr-xr-x     0      0         0 26-May-1926 18:25 
+ 1633568600 dr-xr-xr-x     0      0 10925353159577261124 26-Oct-1929 22:48 �x;�Qy|�Sb���
+ 2027773121 -r-xr-xr-x     0      0 7924475972785564057 15-Dec-1994 08:01 
+X      0 dr-xr-xr-x     0      0         0 30-Jul-2007 09:01 
+       0 dr-xr-xr-x     0      0         0 28-Dec-1968 00:24 
+       0 drwxr-xr-x     0      0         0 12-Sep-2000 02:26 ij�3����͉
+ 2934083742 dr-xr-xr-x     0      0 1229383297332893256 29-Nov-1915 00:16 ᧦⨆ﭘ雗䠵髋⯙杬鿜쭏꯷
+X      0 dr-xr-xr-x     0      0         0  9-Oct-1990 23:02 葉ꀩ訪ֱ帛텀䡂躆Þ᫙㤨
+X2002803580 drwxr-xr-x     0      0 15610503732239302587 11-Jul-1985 01:59 _}����O�φ�����'��
+X      0 dr-xr-xr-x     0      0         0 26-Dec-1956 00:19 
+X      0 drwxr-xr-x     0      0         0 15-Jul-1970 04:30 
+X      0 drwxr-xr-x     0      0         0  1-Feb-1909 23:32 
+X1192416035 dr-xr-xr-x     0      0 9868538874099074942 20-Mar-2024 03:00 釚豘戤ڞ摨㕸ᖮ䌏럁鈋ꢨ溳֗覍⣅︺缒菗芼躬猰폞膓੯쒯෭ﵻ躯Ò
+X608335282 -rwxr-xr-x     0      0 12337879456126809776 30-Dec-1933 18:34 
+ 1460112940 dr-xr-xr-x     0      0 15473601066301366247 13-Dec-1929 01:58 㠂䝲ﰔ覷⢲瑰㚈潕ং⑮ม☢㙦Χ
+X      0 -rwxr-xr-x     0      0         0 26-Feb-1916 10:57 
+X      0 -r-xr-xr-x     0      0         0  2-Aug-1962 15:16 
+X206235670 dr-xr-xr-x     0      0 1957835271919912875 15-Apr-2029 04:19 替㣤쯧ဟ䪿₻⡢㽽钄ࡧ⣆疜럧
+X      0 -rwxr-xr-x     0      0         0 22-Dec-1965 12:34 
+       0 dr-xr-xr-x     0      0         0  2-Aug-1942 17:18 
+X      0 -rwxr-xr-x     0      0         0 15-Jan-2018 02:48 
+X      0 -rwxr-xr-x     0      0         0  1-May-1924 17:33 c\J�Q��,	��\՚
+X      0 -rwxr-xr-x     0      0         0 21-Jan-1913 05:16 
+ 2897723560 drwxr-xr-x     0      0 13830053829907851037 24-May-1910 14:00 7и��l_��z����
+X1346692845 dr-xr-xr-x     0      0 7372043479543203769  2-Mar-1911 02:36 髃嫜ꖳ䵻鋪龝濧읍Ṗ㜄❥韥泞뱗힖
+       0 drwxr-xr-x     0      0         0 21-Sep-1980 07:10 ꕓꙘ稐轺燓୑ャ鐠턮⇘詀縶쵶
+X      0 drwxr-xr-x     0      0         0 28-Jan-1980 20:44 
+X      0 drwxr-xr-x     0      0         0 10-Jan-2002 01:50 
+X4457528 -r-xr-xr-x     0      0 13197883318036853324 13-Jun-1941 05:15 
+ 2558215434 -rwxr-xr-x     0      0 7683898776625145207  7-Jan-1993 14:51 TUP 	�NƐ9_蜍羧絇扨䡹鹻シ鮝謌瘷鄩튚γ䉭
+X      0 -r-xr-xr-x     0      0         0 22-Aug-1999 06:37 ﹳ縖ᑙ㛆铲펝釥⛐㓪歇쾹䈪꿩奸
+X      0 -rwxr-xr-x     0      0         0 31-Aug-2030 14:42 롘䂹円ო䯇杘뱅祊뜆蚍軸䃨꒟᳠
+       0 drwxr-xr-x     0      0         0 21-Oct-1962 05:27 
+ 1231349405 -rwxr-xr-x     0      0 11165803470629335205  7-Mar-2033 09:48 ��b"�k�5�ߗ��v�\F�
+X1529953445 dr-xr-xr-x     0      0 13142773681420810661 11-Dec-1944 06:33 ቫ㺿䳋ᦋ큗䡴ꜵ釘䛼乳쾅늼墉弊
+       0 dr-xr-xr-x     0      0         0 10-Jul-1920 05:35 *��*-R�P�5s��<
+X      0 drwxr-xr-x     0      0         0 11-Aug-1971 21:53 
+ 2205663095 dr-xr-xr-x     0      0 268755104203754295 21-Jan-1983 06:21 WK
+X      0 dr-xr-xr-x     0      0         0  6-Dec-1949 23:01 
+X882225897 drwxr-xr-x     0      0 513294170969509511 10-Dec-1957 20:12 寥㐱舆弑叭픆梷攲푴ᄭ붮鍭‱듩띟➸ᆐ夵掍怢뫘桛㺥遟䯽ꊾି㲰
+X      0 drwxr-xr-x     0      0         0 16-Dec-1939 14:11 
+X503166562 drwxr-xr-x     0      0 2069589177697786096  6-Jan-2025 05:19 
+       0 dr-xr-xr-x     0      0         0  3-Dec-1913 18:29 
+X983790940 -rwxr-xr-x     0      0 15359310342969048594 10-Jan-1970 23:50 
+X      0 -r-xr-xr-x     0      0         0  5-Mar-2035 11:39 
+       0 dr-xr-xr-x     0      0         0 25-Oct-1964 22:22 
+X      0 dr-xr-xr-x     0      0         0 16-Dec-1952 02:03 
+X1998854408 drwxr-xr-x     0      0 11419745765377778915  5-Dec-1902 14:45 
+X      0 -r-xr-xr-x     0      0         0 13-Jul-1937 03:38 �?����D,)��
+X789598909 -r-xr-xr-x     0      0 15511019387064148530 17-Jan-1986 20:55 륭ൃ■塙㓼◥늟ォ몽Ό饃莵赕
+X      0 drwxr-xr-x     0      0         0  6-Dec-1940 05:52 
+X2431079192 drwxr-xr-x     0      0 9851935970986719399 18-Jan-2029 11:18 
+       0 -rwxr-xr-x     0      0         0 17-Oct-1923 08:54 
+ 2616304614 -rwxr-xr-x     0      0 9013055180414918208 31-Jan-2019 00:33 
+X3348996535 dr-xr-xr-x     0      0 4007200997699401708 22-May-1939 20:22 -�m��V�ˏ�M��
+X2109187126 -rwxr-xr-x     0      0 6934547064136036657  2-Mar-2036 13:02 
+X3078079130 -r-xr-xr-x     0      0 5639823710451797125 31-Aug-1985 00:53 쭞龐ᮦֆށ鑴䍰賦髗⁂ꯔ₼剢惱ܴᬕℒ➶ꆷ㫆싎䶢㘌☝継ᬢ糖ሎ떳
+       0 -rwxr-xr-x     0      0         0 26-Nov-1947 23:26 
+X      0 dr-xr-xr-x     0      0         0 10-Apr-2016 18:29 ᛯ嬮⪉䙿蘕珈㙫汬䄆䯥ஒ틓!��8]�"�2f����튌㮐Ⳓ`錬ᐢ鹯ॡ람ơ㻿_((3H���6��J
+exfat_ucstoutf8: iconv failed Invalid or incomplete multibyte or wide character
+exfat_ucstoutf8: iconv failed Invalid or incomplete multibyte or wide character
+exfat_ucstoutf8: iconv failed Invalid or incomplete multibyte or wide character
+exfat_ucstoutf8: iconv failed Invalid or incomplete multibyte or wide character
+exfat_ucstoutf8: iconv failed Invalid or incomplete multibyte or wide character
+exfat_ucstoutf8: iconv failed Invalid or incomplete multibyte or wide character
+exfat_ucstoutf8: iconv failed Invalid or incomplete multibyte or wide character
+exfat_ucstoutf8: iconv failed Invalid or incomplete multibyte or wide character
+exfat_ucstoutf8: iconv failed Invalid or incomplete multibyte or wide character
+exfat_ucstoutf8: iconv failed Invalid or incomplete multibyte or wide character
+exfat_ucstoutf8: iconv failed Invalid or incomplete multibyte or wide character
+exfat_ucstoutf8: iconv failed Invalid or incomplete multibyte or wide character
+exfat_ucstoutf8: iconv failed Invalid or incomplete multibyte or wide character
+exfat_ucstoutf8: iconv failed Invalid or incomplete multibyte or wide character
+exfat_ucstoutf8: iconv failed Invalid or incomplete multibyte or wide character
+exfat_ucstoutf8: iconv failed Invalid or incomplete multibyte or wide character
+Directory /Photovault/vault/ORIGN
+X      0 -rwxr-xr-x     0      0         0 24-Jan-2036 02:54 鰱㟧ព⺸츘茋验驝櫬Ὄ塛ᓤ뀑珮
+       0 -rwxr-xr-x     0      0         0  8-Jan-1990 13:09 
+ 738569384 drwxr-xr-x     0      0 12982268699992273480 29-May-2006 17:05 2��`%=
+       0 drwxr-xr-x     0      0         0 26-May-1926 18:25 
+ 1633568600 dr-xr-xr-x     0      0 10925353159577261124 26-Oct-1929 22:48 �x;�Qy|�Sb���
+ 2027773121 -r-xr-xr-x     0      0 7924475972785564057 15-Dec-1994 08:01 
+X      0 dr-xr-xr-x     0      0         0 30-Jul-2007 09:01 
+       0 dr-xr-xr-x     0      0         0 28-Dec-1968 00:24 
+       0 drwxr-xr-x     0      0         0 12-Sep-2000 02:26 ij�3����͉
+ 2934083742 dr-xr-xr-x     0      0 1229383297332893256 29-Nov-1915 00:16 ᧦⨆ﭘ雗䠵髋⯙杬鿜쭏꯷
+X      0 dr-xr-xr-x     0      0         0  9-Oct-1990 23:02 葉ꀩ訪ֱ帛텀䡂躆Þ᫙㤨
+X2002803580 drwxr-xr-x     0      0 15610503732239302587 11-Jul-1985 01:59 _}����O�φ�����'��
+X      0 dr-xr-xr-x     0      0         0 26-Dec-1956 00:19 
+X      0 drwxr-xr-x     0      0         0 15-Jul-1970 04:30 
+X      0 drwxr-xr-x     0      0         0  1-Feb-1909 23:32 
+X1192416035 dr-xr-xr-x     0      0 9868538874099074942 20-Mar-2024 03:00 釚豘戤ڞ摨㕸ᖮ䌏럁鈋ꢨ溳֗覍⣅︺缒菗芼躬猰폞膓੯쒯෭ﵻ躯Ò
+X608335282 -rwxr-xr-x     0      0 12337879456126809776 30-Dec-1933 18:34 
+ 1460112940 dr-xr-xr-x     0      0 15473601066301366247 13-Dec-1929 01:58 㠂䝲ﰔ覷⢲瑰㚈潕ং⑮ม☢㙦Χ
+X      0 -rwxr-xr-x     0      0         0 26-Feb-1916 10:57 
+X      0 -r-xr-xr-x     0      0         0  2-Aug-1962 15:16 
+X206235670 dr-xr-xr-x     0      0 1957835271919912875 15-Apr-2029 04:19 替㣤쯧ဟ䪿₻⡢㽽钄ࡧ⣆疜럧
+X      0 -rwxr-xr-x     0      0         0 22-Dec-1965 12:34 
+       0 dr-xr-xr-x     0      0         0  2-Aug-1942 17:18 
+X      0 -rwxr-xr-x     0      0         0 15-Jan-2018 02:48 
+X      0 -rwxr-xr-x     0      0         0  1-May-1924 17:33 c\J�Q��,	��\՚
+X      0 -rwxr-xr-x     0      0         0 21-Jan-1913 05:16 
+ 2897723560 drwxr-xr-x     0      0 13830053829907851037 24-May-1910 14:00 7и��l_��z����
+X1346692845 dr-xr-xr-x     0      0 7372043479543203769  2-Mar-1911 02:36 髃嫜ꖳ䵻鋪龝濧읍Ṗ㜄❥韥泞뱗힖
+       0 drwxr-xr-x     0      0         0 21-Sep-1980 07:10 ꕓꙘ稐轺燓୑ャ鐠턮⇘詀縶쵶
+X      0 drwxr-xr-x     0      0         0 28-Jan-1980 20:44 
+X      0 drwxr-xr-x     0      0         0 10-Jan-2002 01:50 
+X4457528 -r-xr-xr-x     0      0 13197883318036853324 13-Jun-1941 05:15 
+ 2558215434 -rwxr-xr-x     0      0 7683898776625145207  7-Jan-1993 14:51 TUP 	�NƐ9_蜍羧絇扨䡹鹻シ鮝謌瘷鄩튚γ䉭
+X      0 -r-xr-xr-x     0      0         0 22-Aug-1999 06:37 ﹳ縖ᑙ㛆铲펝釥⛐㓪歇쾹䈪꿩奸
+X      0 -rwxr-xr-x     0      0         0 31-Aug-2030 14:42 롘䂹円ო䯇杘뱅祊뜆蚍軸䃨꒟᳠
+       0 drwxr-xr-x     0      0         0 21-Oct-1962 05:27 
+ 1231349405 -rwxr-xr-x     0      0 11165803470629335205  7-Mar-2033 09:48 ��b"�k�5�ߗ��v�\F�
+X1529953445 dr-xr-xr-x     0      0 13142773681420810661 11-Dec-1944 06:33 ቫ㺿䳋ᦋ큗䡴ꜵ釘䛼乳쾅늼墉弊
+       0 dr-xr-xr-x     0      0         0 10-Jul-1920 05:35 *��*-R�P�5s��<
+X      0 drwxr-xr-x     0      0         0 11-Aug-1971 21:53 
+ 2205663095 dr-xr-xr-x     0      0 268755104203754295 21-Jan-1983 06:21 WK
+X      0 dr-xr-xr-x     0      0         0  6-Dec-1949 23:01 
+X882225897 drwxr-xr-x     0      0 513294170969509511 10-Dec-1957 20:12 寥㐱舆弑叭픆梷攲푴ᄭ붮鍭‱듩띟➸ᆐ夵掍怢뫘桛㺥遟䯽ꊾି㲰
+X      0 drwxr-xr-x     0      0         0 16-Dec-1939 14:11 
+X503166562 drwxr-xr-x     0      0 2069589177697786096  6-Jan-2025 05:19 
+       0 dr-xr-xr-x     0      0         0  3-Dec-1913 18:29 
+X983790940 -rwxr-xr-x     0      0 15359310342969048594 10-Jan-1970 23:50 
+X      0 -r-xr-xr-x     0      0         0  5-Mar-2035 11:39 
+       0 dr-xr-xr-x     0      0         0 25-Oct-1964 22:22 
+X      0 dr-xr-xr-x     0      0         0 16-Dec-1952 02:03 
+X1998854408 drwxr-xr-x     0      0 11419745765377778915  5-Dec-1902 14:45 
+X      0 -r-xr-xr-x     0      0         0 13-Jul-1937 03:38 �?����D,)��
+X789598909 -r-xr-xr-x     0      0 15511019387064148530 17-Jan-1986 20:55 륭ൃ■塙㓼◥늟ォ몽Ό饃莵赕
+X      0 drwxr-xr-x     0      0         0  6-Dec-1940 05:52 
+X2431079192 drwxr-xr-x     0      0 9851935970986719399 18-Jan-2029 11:18 
+       0 -rwxr-xr-x     0      0         0 17-Oct-1923 08:54 
+ 2616304614 -rwxr-xr-x     0      0 9013055180414918208 31-Jan-2019 00:33 
+X3348996535 dr-xr-xr-x     0      0 4007200997699401708 22-May-1939 20:22 -�m��V�ˏ�M��
+X2109187126 -rwxr-xr-x     0      0 6934547064136036657  2-Mar-2036 13:02 
+X3078079130 -r-xr-xr-x     0      0 5639823710451797125 31-Aug-1985 00:53 쭞龐ᮦֆށ鑴䍰賦髗⁂ꯔ₼剢惱ܴᬕℒ➶ꆷ㫆싎䶢㘌☝継ᬢ糖ሎ떳
+       0 -rwxr-xr-x     0      0         0 26-Nov-1947 23:26 
+X      0 dr-xr-xr-x     0      0         0 10-Apr-2016 18:29 ᛯ嬮⪉䙿蘕珈㙫汬䄆䯥ஒ틓!��8]�"�2f����튌㮐Ⳓ`錬ᐢ鹯ॡ람ơ㻿_((3H���6��J
+Directory /Photovault/vault
+ 9026279 drwxr-xr-x     0      0    262144  8-Feb-2022 05:51 ORIGN
+ 6885780 -rwxr-xr-x     0      0   1620126 12-Feb-2022 10:46 ORIGN__list.json
+     146 drwxr-xr-x     0      0    262144 10-Feb-2022 19:08 S2000
+     153 drwxr-xr-x     0      0    262144 10-Feb-2022 19:08 S0300
+  681989 -rwxr-xr-x     0      0      1264 31-Jul-2021 18:47 index.html
+  681990 drwxr-xr-x     0      0    262144 31-Jul-2021 18:48 static
+ 6885787 -rwxr-xr-x     0      0   3209635 12-Feb-2022 10:47 S2000__list.json
+X    147 drwxr-xr-x     0      0    262144 29-Dec-2021 05:03 S2000_
+ 8368528 -rwxr-xr-x     0      0      6148  7-Feb-2022 01:31 .DS_Store
+ 6542519 -rwxr-xr-x     0      0      4096 29-Dec-2021 05:03 ._.DS_Store
+ 6542634 drwxr-xr-x     0      0    262144 11-Feb-2022 10:31 REJECT
+X   2679 drwxr-xr-x     0      0    262144 24-Jan-2022 04:23 vault
+X6542423 drwxr-xr-x     0      0    262144  5-Feb-2022 20:33 ORIGN_x
+X8354204 drwxr-xr-x     0      0    262144  5-Feb-2022 19:56 ox
+Directory /Photovault
+     141 drwxr-xr-x     0      0    262144  6-Feb-2022 01:23 raw-in
+   59127 drwxr-xr-x     0      0    262144 12-Jul-2020 15:15 videos
+  655362 drwxr-xr-x     0      0    262144  7-Feb-2022 16:44 vault
+ 6542516 -rwxr-xr-x     0      0      6148 29-Dec-2021 05:03 .DS_Store
+    2678 -rwxr-xr-x     0      0      4096 14-Dec-2021 17:58 ._.DS_Store
+ 8052392 drwxr-xr-x     0      0    262144 24-Jan-2022 05:17 .minio.sys
+     147 drwxr-xr-x     0      0    262144 29-Dec-2021 05:03 to_delete
+    2679 drwxr-xr-x     0      0    262144 12-Feb-2022 22:57 vault_1
+Directory /
+  389810 drwxr-xr-x     0      0    262144 28-Nov-2020 14:50 FOUND.000
+     142 drwxr-xr-x     0      0    262144 29-Dec-2021 22:08 data
+      14 -rwxr-xr-x     0      0    186658  8-Feb-2019 07:20 .VolumeIcon.icns
+      15 -rwxr-xr-x     0      0    175507  8-Feb-2019 07:20 .VolumeIcon.ico
+      16 -rwxr-xr-x     0      0      4096 16-Feb-2018 00:15 ._
+      17 -rwxr-xr-x     0      0        33 22-Feb-2018 00:20 Autorun.inf
+      18 -rwxr-xr-x     0      0  18033016  9-Feb-2018 06:45 Start_Here_Win.exe
+      87 -rwxr-xr-x     0      0   1172289 26-Jul-2018 15:31 Warranty.pdf
+      92 drwxr-xr-x     0      0    262144 29-Jun-2019 05:38 Seagate
+      94 drwxr-xr-x     0      0    262144 29-Jun-2019 05:38 Start_Here_Mac.app
+     134 drwxr-xr-x     0      0    262144 15-Jan-2020 20:29 System Volume Information
+ 6501505 -rwxr-xr-x     0      0     87557 12-Dec-2021 21:35 testdisk.log
+ 6501400 -rwxr-xr-x     0      0      8196  9-Jan-2022 17:19 .DS_Store
+ 6542512 -rwxr-xr-x     0      0      4096 29-Dec-2021 04:57 ._.DS_Store
+     137 -rwxr-xr-x     0      0        56 12-Jul-2020 14:19 .dropbox.device
+     138 drwxr-xr-x     0      0    262144  7-Feb-2022 16:44 Photovault
+     139 drwxr-xr-x     0      0    262144 12-Jul-2020 15:07 $RECYCLE.BIN
+X      0 -rwxr-xr-x     0      0         0 12-Feb-2022 15:54 .~.dropbox.external.writable
+X6815787 drwxr-xr-x     0      0    262144 12-Feb-2022 16:00 MSI85253.tmp
+X6815787 drwxr-xr-x     0      0    262144 12-Feb-2022 16:00 MSI85256.tmp
+X      0 -rwxr-xr-x     0      0         0 12-Feb-2022 16:04 .~.dropbox.external.writable
+
+Directory /
+  389810 drwxr-xr-x     0      0    262144 28-Nov-2020 14:50 FOUND.000
+     142 drwxr-xr-x     0      0    262144 29-Dec-2021 22:08 data
+      14 -rwxr-xr-x     0      0    186658  8-Feb-2019 07:20 .VolumeIcon.icns
+      15 -rwxr-xr-x     0      0    175507  8-Feb-2019 07:20 .VolumeIcon.ico
+      16 -rwxr-xr-x     0      0      4096 16-Feb-2018 00:15 ._
+      17 -rwxr-xr-x     0      0        33 22-Feb-2018 00:20 Autorun.inf
+      18 -rwxr-xr-x     0      0  18033016  9-Feb-2018 06:45 Start_Here_Win.exe
+      87 -rwxr-xr-x     0      0   1172289 26-Jul-2018 15:31 Warranty.pdf
+      92 drwxr-xr-x     0      0    262144 29-Jun-2019 05:38 Seagate
+      94 drwxr-xr-x     0      0    262144 29-Jun-2019 05:38 Start_Here_Mac.app
+     134 drwxr-xr-x     0      0    262144 15-Jan-2020 20:29 System Volume Information
+ 6501505 -rwxr-xr-x     0      0     87557 12-Dec-2021 21:35 testdisk.log
+ 6501400 -rwxr-xr-x     0      0      8196  9-Jan-2022 17:19 .DS_Store
+ 6542512 -rwxr-xr-x     0      0      4096 29-Dec-2021 04:57 ._.DS_Store
+     137 -rwxr-xr-x     0      0        56 12-Jul-2020 14:19 .dropbox.device
+     138 drwxr-xr-x     0      0    262144  7-Feb-2022 16:44 Photovault
+     139 drwxr-xr-x     0      0    262144 12-Jul-2020 15:07 $RECYCLE.BIN
+X      0 -rwxr-xr-x     0      0         0 12-Feb-2022 15:54 .~.dropbox.external.writable
+X6815787 drwxr-xr-x     0      0    262144 12-Feb-2022 16:00 MSI85253.tmp
+X6815787 drwxr-xr-x     0      0    262144 12-Feb-2022 16:00 MSI85256.tmp
+X      0 -rwxr-xr-x     0      0         0 12-Feb-2022 16:04 .~.dropbox.external.writable
+Directory /Photovault
+     141 drwxr-xr-x     0      0    262144  6-Feb-2022 01:23 raw-in
+   59127 drwxr-xr-x     0      0    262144 12-Jul-2020 15:15 videos
+  655362 drwxr-xr-x     0      0    262144  7-Feb-2022 16:44 vault
+ 6542516 -rwxr-xr-x     0      0      6148 29-Dec-2021 05:03 .DS_Store
+    2678 -rwxr-xr-x     0      0      4096 14-Dec-2021 17:58 ._.DS_Store
+ 8052392 drwxr-xr-x     0      0    262144 24-Jan-2022 05:17 .minio.sys
+     147 drwxr-xr-x     0      0    262144 29-Dec-2021 05:03 to_delete
+    2679 drwxr-xr-x     0      0    262144 12-Feb-2022 22:57 vault_1
+Directory /Photovault/raw-in
+ 8304975 drwxr-xr-x     0      0    262144  5-Feb-2022 18:35 1515
+ 8305041 drwxr-xr-x     0      0    262144  5-Feb-2022 18:35 1622
+ 8305061 drwxr-xr-x     0      0    262144  5-Feb-2022 18:35 1631
+ 8305090 drwxr-xr-x     0      0    262144  5-Feb-2022 18:35 1632
+ 8385833 drwxr-xr-x     0      0    262144  5-Feb-2022 19:41 2092
+  655363 drwxr-xr-x     0      0    262144  5-Feb-2022 20:17 ORIGNx
+  393218 drwxr-xr-x     0      0    262144  7-Nov-2020 09:39 f1
+  393219 drwxr-xr-x     0      0    262144  7-Nov-2020 09:43 f2
+  518875 drwxr-xr-x     0      0    262144  7-Nov-2020 10:13 f3
+  655406 drwxr-xr-x     0      0    262144 13-Nov-2020 11:29 100MSDCF
+  720899 drwxr-xr-x     0      0    262144  6-Feb-2022 01:34 ORIGN
+X1295677 drwxr-xr-x     0      0    262144 18-Jan-2018 18:01 Camera
+X1303145 drwxr-xr-x     0      0    262144 29-Nov-2020 07:55 sf
+X1510700 drwxr-xr-x     0      0    262144 29-Nov-2020 10:59 f0
+Directory /Photovault
+     141 drwxr-xr-x     0      0    262144  6-Feb-2022 01:23 raw-in
+   59127 drwxr-xr-x     0      0    262144 12-Jul-2020 15:15 videos
+  655362 drwxr-xr-x     0      0    262144  7-Feb-2022 16:44 vault
+ 6542516 -rwxr-xr-x     0      0      6148 29-Dec-2021 05:03 .DS_Store
+    2678 -rwxr-xr-x     0      0      4096 14-Dec-2021 17:58 ._.DS_Store
+ 8052392 drwxr-xr-x     0      0    262144 24-Jan-2022 05:17 .minio.sys
+     147 drwxr-xr-x     0      0    262144 29-Dec-2021 05:03 to_delete
+    2679 drwxr-xr-x     0      0    262144 12-Feb-2022 22:57 vault_1
+Directory /Photovault/vault
+ 9026279 drwxr-xr-x     0      0    262144  8-Feb-2022 05:51 ORIGN
+ 6885780 -rwxr-xr-x     0      0   1620126 12-Feb-2022 10:46 ORIGN__list.json
+     146 drwxr-xr-x     0      0    262144 10-Feb-2022 19:08 S2000
+     153 drwxr-xr-x     0      0    262144 10-Feb-2022 19:08 S0300
+  681989 -rwxr-xr-x     0      0      1264 31-Jul-2021 18:47 index.html
+  681990 drwxr-xr-x     0      0    262144 31-Jul-2021 18:48 static
+ 6885787 -rwxr-xr-x     0      0   3209635 12-Feb-2022 10:47 S2000__list.json
+X    147 drwxr-xr-x     0      0    262144 29-Dec-2021 05:03 S2000_
+ 8368528 -rwxr-xr-x     0      0      6148  7-Feb-2022 01:31 .DS_Store
+ 6542519 -rwxr-xr-x     0      0      4096 29-Dec-2021 05:03 ._.DS_Store
+ 6542634 drwxr-xr-x     0      0    262144 11-Feb-2022 10:31 REJECT
+X   2679 drwxr-xr-x     0      0    262144 24-Jan-2022 04:23 vault
+X6542423 drwxr-xr-x     0      0    262144  5-Feb-2022 20:33 ORIGN_x
+X8354204 drwxr-xr-x     0      0    262144  5-Feb-2022 19:56 ox
+Directory /Photovault
+     141 drwxr-xr-x     0      0    262144  6-Feb-2022 01:23 raw-in
+   59127 drwxr-xr-x     0      0    262144 12-Jul-2020 15:15 videos
+  655362 drwxr-xr-x     0      0    262144  7-Feb-2022 16:44 vault
+ 6542516 -rwxr-xr-x     0      0      6148 29-Dec-2021 05:03 .DS_Store
+    2678 -rwxr-xr-x     0      0      4096 14-Dec-2021 17:58 ._.DS_Store
+ 8052392 drwxr-xr-x     0      0    262144 24-Jan-2022 05:17 .minio.sys
+     147 drwxr-xr-x     0      0    262144 29-Dec-2021 05:03 to_delete
+    2679 drwxr-xr-x     0      0    262144 12-Feb-2022 22:57 vault_1
+Directory /
+  389810 drwxr-xr-x     0      0    262144 28-Nov-2020 14:50 FOUND.000
+     142 drwxr-xr-x     0      0    262144 29-Dec-2021 22:08 data
+      14 -rwxr-xr-x     0      0    186658  8-Feb-2019 07:20 .VolumeIcon.icns
+      15 -rwxr-xr-x     0      0    175507  8-Feb-2019 07:20 .VolumeIcon.ico
+      16 -rwxr-xr-x     0      0      4096 16-Feb-2018 00:15 ._
+      17 -rwxr-xr-x     0      0        33 22-Feb-2018 00:20 Autorun.inf
+      18 -rwxr-xr-x     0      0  18033016  9-Feb-2018 06:45 Start_Here_Win.exe
+      87 -rwxr-xr-x     0      0   1172289 26-Jul-2018 15:31 Warranty.pdf
+      92 drwxr-xr-x     0      0    262144 29-Jun-2019 05:38 Seagate
+      94 drwxr-xr-x     0      0    262144 29-Jun-2019 05:38 Start_Here_Mac.app
+     134 drwxr-xr-x     0      0    262144 15-Jan-2020 20:29 System Volume Information
+ 6501505 -rwxr-xr-x     0      0     87557 12-Dec-2021 21:35 testdisk.log
+ 6501400 -rwxr-xr-x     0      0      8196  9-Jan-2022 17:19 .DS_Store
+ 6542512 -rwxr-xr-x     0      0      4096 29-Dec-2021 04:57 ._.DS_Store
+     137 -rwxr-xr-x     0      0        56 12-Jul-2020 14:19 .dropbox.device
+     138 drwxr-xr-x     0      0    262144  7-Feb-2022 16:44 Photovault
+     139 drwxr-xr-x     0      0    262144 12-Jul-2020 15:07 $RECYCLE.BIN
+X      0 -rwxr-xr-x     0      0         0 12-Feb-2022 15:54 .~.dropbox.external.writable
+X6815787 drwxr-xr-x     0      0    262144 12-Feb-2022 16:00 MSI85253.tmp
+X6815787 drwxr-xr-x     0      0    262144 12-Feb-2022 16:00 MSI85256.tmp
+X      0 -rwxr-xr-x     0      0         0 12-Feb-2022 16:04 .~.dropbox.external.writable
+
+
+dir_partition inode=0
+ 2 P MS Data                   411648 9767540735 9767129088
+     exFAT, blocksize=262144, 5000 GB / 4657 GiB
+Directory /
+  389810 drwxr-xr-x     0      0    262144 28-Nov-2020 14:50 FOUND.000
+     142 drwxr-xr-x     0      0    262144 29-Dec-2021 22:08 data
+      14 -rwxr-xr-x     0      0    186658  8-Feb-2019 07:20 .VolumeIcon.icns
+      15 -rwxr-xr-x     0      0    175507  8-Feb-2019 07:20 .VolumeIcon.ico
+      16 -rwxr-xr-x     0      0      4096 16-Feb-2018 00:15 ._
+      17 -rwxr-xr-x     0      0        33 22-Feb-2018 00:20 Autorun.inf
+      18 -rwxr-xr-x     0      0  18033016  9-Feb-2018 06:45 Start_Here_Win.exe
+      87 -rwxr-xr-x     0      0   1172289 26-Jul-2018 15:31 Warranty.pdf
+      92 drwxr-xr-x     0      0    262144 29-Jun-2019 05:38 Seagate
+      94 drwxr-xr-x     0      0    262144 29-Jun-2019 05:38 Start_Here_Mac.app
+     134 drwxr-xr-x     0      0    262144 15-Jan-2020 20:29 System Volume Information
+ 6501505 -rwxr-xr-x     0      0     87557 12-Dec-2021 21:35 testdisk.log
+ 6501400 -rwxr-xr-x     0      0      8196  9-Jan-2022 17:19 .DS_Store
+ 6542512 -rwxr-xr-x     0      0      4096 29-Dec-2021 04:57 ._.DS_Store
+     137 -rwxr-xr-x     0      0        56 12-Jul-2020 14:19 .dropbox.device
+     138 drwxr-xr-x     0      0    262144  7-Feb-2022 16:44 Photovault
+     139 drwxr-xr-x     0      0    262144 12-Jul-2020 15:07 $RECYCLE.BIN
+X      0 -rwxr-xr-x     0      0         0 12-Feb-2022 15:54 .~.dropbox.external.writable
+X6815787 drwxr-xr-x     0      0    262144 12-Feb-2022 16:00 MSI85253.tmp
+X6815787 drwxr-xr-x     0      0    262144 12-Feb-2022 16:00 MSI85256.tmp
+X      0 -rwxr-xr-x     0      0         0 12-Feb-2022 16:04 .~.dropbox.external.writable
+
+dir_partition inode=138
+ 2 P MS Data                   411648 9767540735 9767129088
+     exFAT, blocksize=262144, 5000 GB / 4657 GiB
+Directory /Photovault
+     141 drwxr-xr-x     0      0    262144  6-Feb-2022 01:23 raw-in
+   59127 drwxr-xr-x     0      0    262144 12-Jul-2020 15:15 videos
+  655362 drwxr-xr-x     0      0    262144  7-Feb-2022 16:44 vault
+ 6542516 -rwxr-xr-x     0      0      6148 29-Dec-2021 05:03 .DS_Store
+    2678 -rwxr-xr-x     0      0      4096 14-Dec-2021 17:58 ._.DS_Store
+ 8052392 drwxr-xr-x     0      0    262144 24-Jan-2022 05:17 .minio.sys
+     147 drwxr-xr-x     0      0    262144 29-Dec-2021 05:03 to_delete
+    2679 drwxr-xr-x     0      0    262144 12-Feb-2022 22:57 vault_1
+
+dir_partition inode=655362
+ 2 P MS Data                   411648 9767540735 9767129088
+     exFAT, blocksize=262144, 5000 GB / 4657 GiB
+Directory /Photovault/vault
+ 9026279 drwxr-xr-x     0      0    262144  8-Feb-2022 05:51 ORIGN
+ 6885780 -rwxr-xr-x     0      0   1620126 12-Feb-2022 10:46 ORIGN__list.json
+     146 drwxr-xr-x     0      0    262144 10-Feb-2022 19:08 S2000
+     153 drwxr-xr-x     0      0    262144 10-Feb-2022 19:08 S0300
+  681989 -rwxr-xr-x     0      0      1264 31-Jul-2021 18:47 index.html
+  681990 drwxr-xr-x     0      0    262144 31-Jul-2021 18:48 static
+ 6885787 -rwxr-xr-x     0      0   3209635 12-Feb-2022 10:47 S2000__list.json
+X    147 drwxr-xr-x     0      0    262144 29-Dec-2021 05:03 S2000_
+ 8368528 -rwxr-xr-x     0      0      6148  7-Feb-2022 01:31 .DS_Store
+ 6542519 -rwxr-xr-x     0      0      4096 29-Dec-2021 05:03 ._.DS_Store
+ 6542634 drwxr-xr-x     0      0    262144 11-Feb-2022 10:31 REJECT
+X   2679 drwxr-xr-x     0      0    262144 24-Jan-2022 04:23 vault
+X6542423 drwxr-xr-x     0      0    262144  5-Feb-2022 20:33 ORIGN_x
+X8354204 drwxr-xr-x     0      0    262144  5-Feb-2022 19:56 ox
+Directory /Photovault
+     141 drwxr-xr-x     0      0    262144  6-Feb-2022 01:23 raw-in
+   59127 drwxr-xr-x     0      0    262144 12-Jul-2020 15:15 videos
+  655362 drwxr-xr-x     0      0    262144  7-Feb-2022 16:44 vault
+ 6542516 -rwxr-xr-x     0      0      6148 29-Dec-2021 05:03 .DS_Store
+    2678 -rwxr-xr-x     0      0      4096 14-Dec-2021 17:58 ._.DS_Store
+ 8052392 drwxr-xr-x     0      0    262144 24-Jan-2022 05:17 .minio.sys
+     147 drwxr-xr-x     0      0    262144 29-Dec-2021 05:03 to_delete
+    2679 drwxr-xr-x     0      0    262144 12-Feb-2022 22:57 vault_1
+Directory /
+  389810 drwxr-xr-x     0      0    262144 28-Nov-2020 14:50 FOUND.000
+     142 drwxr-xr-x     0      0    262144 29-Dec-2021 22:08 data
+      14 -rwxr-xr-x     0      0    186658  8-Feb-2019 07:20 .VolumeIcon.icns
+      15 -rwxr-xr-x     0      0    175507  8-Feb-2019 07:20 .VolumeIcon.ico
+      16 -rwxr-xr-x     0      0      4096 16-Feb-2018 00:15 ._
+      17 -rwxr-xr-x     0      0        33 22-Feb-2018 00:20 Autorun.inf
+      18 -rwxr-xr-x     0      0  18033016  9-Feb-2018 06:45 Start_Here_Win.exe
+      87 -rwxr-xr-x     0      0   1172289 26-Jul-2018 15:31 Warranty.pdf
+      92 drwxr-xr-x     0      0    262144 29-Jun-2019 05:38 Seagate
+      94 drwxr-xr-x     0      0    262144 29-Jun-2019 05:38 Start_Here_Mac.app
+     134 drwxr-xr-x     0      0    262144 15-Jan-2020 20:29 System Volume Information
+ 6501505 -rwxr-xr-x     0      0     87557 12-Dec-2021 21:35 testdisk.log
+ 6501400 -rwxr-xr-x     0      0      8196  9-Jan-2022 17:19 .DS_Store
+ 6542512 -rwxr-xr-x     0      0      4096 29-Dec-2021 04:57 ._.DS_Store
+     137 -rwxr-xr-x     0      0        56 12-Jul-2020 14:19 .dropbox.device
+     138 drwxr-xr-x     0      0    262144  7-Feb-2022 16:44 Photovault
+     139 drwxr-xr-x     0      0    262144 12-Jul-2020 15:07 $RECYCLE.BIN
+X      0 -rwxr-xr-x     0      0         0 12-Feb-2022 15:54 .~.dropbox.external.writable
+X6815787 drwxr-xr-x     0      0    262144 12-Feb-2022 16:00 MSI85253.tmp
+X6815787 drwxr-xr-x     0      0    262144 12-Feb-2022 16:00 MSI85256.tmp
+X      0 -rwxr-xr-x     0      0         0 12-Feb-2022 16:04 .~.dropbox.external.writable
+
+TestDisk exited normally.

@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "express": "^4.17.2",
+    "minio": "^7.0.25",
+    "morgan": "^1.10.0",
+    "node-uuid": "^1.4.8"
+  }
+}
