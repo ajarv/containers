@@ -27,10 +27,10 @@ mc event add minio/images arn:minio:sqs::1:webhook --event put --suffix .jpg
 mc event add minio/images arn:minio:sqs::1:webhook --event put --suffix .jpg
 
 
-mc event add minio/images arn:minio:sqs::1:webhook --event put --suffix .*
+mc event add minio/images arn:minio:sqs::1:webhook --event put --suffix .JPG
 
 
-
+mc event add minio/images arn:aws:sqs:us-west-2:444455556666:your-queue --event replica,ilm
 
 
 MINIO_HOST=192.168.0.11 MINIO_PORT=9000 MINIO_ACCESS_KEY=kalpa MINIO_SECRET_KEY=rekongpeo node presign-server.js

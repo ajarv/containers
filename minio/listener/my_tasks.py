@@ -1,6 +1,5 @@
 from minio import Minio
 
-import sys
 import time
 import os
 import logging
@@ -11,13 +10,21 @@ import os
 import shutil
 import queue
 import threading
+import datetime
 import urllib.parse
 import hashlib
-from urllib import parse
+# import photo_listings
+from tags_service import TagServiceClient
+
+_TagServiceClient = TagServiceClient()
 
 logger = logging.getLogger(__file__.split('/')[-1])
 
-client = Minio('minio:9000', access_key='kalpa', secret_key='rekongpeo', secure=False)
+MINIO_HOST_PORT = os.environ.get('MINIO_HOST_PORT', "minio:9000")
+client = Minio(MINIO_HOST_PORT,
+               access_key='kalpa',
+               secret_key='rekongpeo',
+               secure=False)
 task_queue = queue.Queue()
 
 
@@ -58,20 +65,21 @@ def task_remove_s3_object(bucket,key):
     logger.info(f"Removed key {bucket} {key}")
 
 
-def task_enqueue_key(bucket_name,object_name):
+def task_enqueue_key(bucket_name,object_name,delay=10):
     task_queue.put((
         bucket_name,
         object_name,
-        time.time() + 10,
+        time.time() + delay,
     ))
-    logger.info(f"Queued up key {object_name}")
+    logger.info(f"Queued up key {bucket_name}/{object_name}")
 
 
 def task_enqueue_bucket(bucket):
+    ix = 0
     for item in client.list_objects(bucket, recursive=True):
         if not item.is_dir:
-            task_enqueue_key(item.bucket_name, item.object_name)
-
+            ix += 1
+            task_enqueue_key(item.bucket_name, item.object_name,delay=0.05*ix)
 
 def do_tasks(bucket_name, object_name):
     try:
@@ -83,11 +91,23 @@ def do_tasks(bucket_name, object_name):
                 task_make_tn(cataloged_file,tn_file_path=cataloged_file.replace('ORIGN','S2000'),size=2000)
                 task_make_tn(cataloged_file,tn_file_path=cataloged_file.replace('ORIGN','S0300'),size=300)
                 logger.info(f"Created Thumbnails {key}")
+                _TagServiceClient.add_photo(
+                    [cataloged_file], [f"ns0:upload-date:{datetime.date.today().isoformat()}"])
             task_remove_s3_object(bucket_name, object_name)
         logger.info(f'Done {bucket_name}/{object_name}')
+        #run_listings()
     except:
         logger.exception(f'Failed {bucket_name}/{object_name}')
         pass
+
+# last_run =[0]
+# def run_listings():
+#     now = time.time()
+#     if (now - last_run[0]) > 60*5: #more than 5 min
+#         last_run[0] = now
+#         logger.info("Creating File listings")
+#         photo_listings.folder_listing_json('/data-out/S2000')
+#     pass
 
 
 def _tn_300(vault_dir):
@@ -131,6 +151,8 @@ def move_file_to_catalog(src, dst_dir='/data-out/ORIGN'):
             shutil.copyfile(src,tgt)
             logger.info(f"Copy ok {src} -> {tgt}")
             return tgt
+        else:
+            logger.warning(f":+ move_file_to_catalog Does not exist {src=}")
         return None
     except:
         logger.exception(f"Copy fail {src} -> {tgt}")
@@ -138,7 +160,7 @@ def move_file_to_catalog(src, dst_dir='/data-out/ORIGN'):
 
 
 def move_to_catalog_folder(key,src_dir='/data', dst_dir='/data-out/ORIGN'):
-    src = os.path.join(src_dir, key.replace(' ', '+'))
+    src = os.path.join(src_dir, key)
     return move_file_to_catalog(src,dst_dir=dst_dir)
 
 if __name__ == '__main__':
