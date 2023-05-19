@@ -17,6 +17,16 @@ services:
       MINIO_API_CORS_ALLOW_ORIGIN: "https://svc.t-1s.com,https://svc.t-1s,http://libra:9080,http://libra:9020"
       #       MINIO_IDENTITY_OPENID_CONFIG_URL: https://dev-hsihsfug.us.auth0.com/.well-known/openid-configuration
       #       MINIO_IDENTITY_OPENID_CLIENT_ID: CoaX8mi1vB75PxpcXz5poc0XnNl7Xo3G
+      # MINIO_NOTIFY_AMQP_ENABLE_one: "on"
+      # MINIO_NOTIFY_AMQP_URL_one: "amqp://guest:guest@rabbitmq:5672"
+      # MINIO_NOTIFY_AMQP_EXCHANGE_one: amq.direct
+      # MINIO_NOTIFY_AMQP_EXCHANGE_TYPE_one: direct
+      # MINIO_NOTIFY_AMQP_ROUTING_KEY_one: s3-event
+      # MINIO_NOTIFY_AMQP_MANDATORY_one: 'off'
+      # MINIO_NOTIFY_AMQP_DURABLE_one: 'on'
+      # MINIO_NOTIFY_AMQP_DELIVERY_MODE_one: '1'
+      # MINIO_NOTIFY_AMQP_COMMENT_one: "RabbitMQ settings"
+      # MINIO_NOTIFY_AMQP_QUEUE_DIR_one: '/home/events'
     ports:
       - 9000:9000
       - 9001:9001
@@ -25,28 +35,28 @@ services:
       - /data
       - --console-address
       - "0.0.0.0:9001"
-  minio-back:
-    image: quay.io/minio/minio
-    restart: always 
-    volumes:
-      - /mnt/5tb/PhotoVault:/data
-      - ./certs:/root/.minio/certs
-    environment:
-      MINIO_ROOT_USER: kalpa
-      MINIO_ROOT_PASSWORD: rekongpeo
-      MINIO_API_CORS_ALLOW_ORIGIN: "https://svc.t-1s.com,https://svc.t-1s,http://libra:9020,http://libra:8080"
-      #       MINIO_IDENTITY_OPENID_CONFIG_URL: https://dev-hsihsfug.us.auth0.com/.well-known/openid-configuration
-      #       MINIO_IDENTITY_OPENID_CLIENT_ID: CoaX8mi1vB75PxpcXz5poc0XnNl7Xo3G
-    ports:
-      - 9002:9002
-      - 9003:9003
-    command:
-      - server
-      - /data
-      - --console-address
-      - ":9003"
-      - --address
-      -  ":9002"
+  # minio-back:
+  #   image: quay.io/minio/minio
+  #   restart: always 
+  #   volumes:
+  #     - /mnt/5tb/PhotoVault:/data
+  #     - ./certs:/root/.minio/certs
+  #   environment:
+  #     MINIO_ROOT_USER: kalpa
+  #     MINIO_ROOT_PASSWORD: rekongpeo
+  #     MINIO_API_CORS_ALLOW_ORIGIN: "https://svc.t-1s.com,https://svc.t-1s,http://libra:9020,http://libra:8080"
+  #     #       MINIO_IDENTITY_OPENID_CONFIG_URL: https://dev-hsihsfug.us.auth0.com/.well-known/openid-configuration
+  #     #       MINIO_IDENTITY_OPENID_CLIENT_ID: CoaX8mi1vB75PxpcXz5poc0XnNl7Xo3G
+  #   ports:
+  #     - 9002:9002
+  #     - 9003:9003
+  #   command:
+  #     - server
+  #     - /data
+  #     - --console-address
+  #     - ":9003"
+  #     - --address
+  #     -  ":9002"
   minio-listener:
     build: ./listener
     image: minio-flask
@@ -88,15 +98,6 @@ services:
       - POSTGRES_DB=postgres
       - POSTGRES_USER=chandigarh
       - POSTGRES_PASSWORD=chandigarh
-  rabbitmq:
-    image: bitnami/rabbitmq:latest
-    container_name: 'rabbitmq'
-    environment:
-      - RABBITMQ_USERNAME=luckhnow
-      - RABBITMQ_PASSWORD=banglore
-    ports:
-        - 5672:5672
-        - 15672:15672
   tag-manager:
     image: photo-jango
     command: python manage.py runserver 0.0.0.0:8000
@@ -109,3 +110,25 @@ services:
       - POSTGRES_NAME=postgres
       - POSTGRES_USER=chandigarh
       - POSTGRES_PASSWORD=chandigarh
+  rabbitmq:
+    image: rabbitmq:3.11-management
+    container_name: 'rabbitmq'
+    ports:
+        - 5672:5672
+        - 15672:15672
+  async-tasks:
+    build: ../async-tasks
+    image: async-tasks
+    user: root
+    command: python src/rabbit_listener.py
+    environment:
+      TAG_SERVICE_HOST: "tag-manager"
+      TAG_SERVICE_PORT: "8000"
+      TAG_SERVICE_AUTH_TOKEN: "efdc792bcdaadc420d2c0ea680173b73d682c6d4"
+      MINIO_HOST_PORT: "minio:9000"
+      MINIO_USERNAME: kalpa
+      MINIO_PASSWORD: rekongpeo
+      AMQP_HOSTNAME: "libra"
+    volumes:
+      - /mnt/ssd/data:/data
+      - /mnt/5tb/PhotoVault/vault:/data-out
