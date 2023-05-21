@@ -1,0 +1,8 @@
+Flask
+minio
+piexif
+requests
+pika
+celery
+flower
+exifread

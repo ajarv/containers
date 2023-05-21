@@ -18,4 +18,4 @@ WORKDIR /work/src
 # Expose the Flask port
 EXPOSE 5000
 
-CMD [ "python", "./s3_event_listener.py" ]
+CMD [ "python", "./src/s3_event_listener.py" ]

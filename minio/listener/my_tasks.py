@@ -13,7 +13,6 @@ import threading
 import datetime
 import urllib.parse
 import hashlib
-# import photo_listings
 from tags_service import TagServiceClient
 
 _TagServiceClient = TagServiceClient()
