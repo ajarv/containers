@@ -108,6 +108,33 @@ def resize_image(source_path, dest_path,size, quality=85,sharpen=False,):
     os.rename(_dest_path,dest_path)
     return True
 
+def make_thumbnail(orign_file_path,tn_file_path=None,size=2000):
+    try:
+        m = JPGPAT.match(orign_file_path)
+        if not m:
+            logger.debug(f"Not an image file {orign_file_path}")
+            return None
+        tn_file_path = tn_file_path or orign_file_path.replace('ORIGN','S2000')
+        if os.path.exists(orign_file_path):
+            resize_image(orign_file_path, tn_file_path, [size,size], quality=85, sharpen=True,)
+            return tn_file_path
+    except:
+        logger.exception(f"TN Create fail {orign_file_path} -> {tn_file_path}")
+        return None
+    
+def make_thumbnails(cataloged_file):
+    try:
+        logger.info(f"begin: make_thumbnails({cataloged_file=})")
+        if JPGPAT.match(cataloged_file):
+            make_thumbnail(cataloged_file,tn_file_path=cataloged_file.replace('ORIGN','S2000'),size=2000)
+            make_thumbnail(cataloged_file,tn_file_path=cataloged_file.replace('ORIGN','S0300'),size=300)
+        logger.info(f"done: make_thumbnails({cataloged_file=})")
+        #run_listings()
+    except:
+        logger.exception(f"fail: make_thumbnails({cataloged_file=})")
+        pass
+
+    
 if __name__ == '__main__':
     ts = get_image_creation_date(sys.argv[1])
     print(ts)

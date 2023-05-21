@@ -1,3 +1,4 @@
+import datetime
 import os
 import pika
 import sys
@@ -6,8 +7,12 @@ import time
 import logging
 from mutil import get_cfg_val
 import file_service
+import catalog_app
+from celery import group
+# import celery_cfg
 
 LOGGER = logging.getLogger(__file__.split('/')[-1])
+
 
 class ExchangeAgent:
     def __init__(self, **kwargs) -> None:
@@ -52,13 +57,8 @@ class ExchangeAgent:
             bucket_name = event_data['Records'][0]['s3']['bucket']['name']
             object_name = event_data['Records'][0]['s3']['object']['key']
             event_name = event_data['Records'][0]['eventName']
-            LOGGER.info(
-                f"Processing {bucket_name=}, {object_name=}, {event_name=}")
             if self.event_callback:
                 self.event_callback(event_name,bucket_name, object_name)
-                duration = time.time() - stime
-                LOGGER.info(
-                    f"Done {bucket_name=}, {object_name=}, {event_name=}, {duration=}")
             ch.basic_ack(delivery_tag = method.delivery_tag) ### <--- this one
         except:
             LOGGER.exception(f"Error processing rabbit event")
@@ -68,14 +68,20 @@ class ExchangeAgent:
 
 
 def main():
-    _FileService = file_service.FileService()
-    def event_callback(event_name,bucket_name, object_name):
+    # _FileService = file_service.FileService()
+
+    # catalog_app.app.conf.update(broker_url = celery_cfg.broker_url)
+
+    tn_task = catalog_app.make_thumbnails.s()
+    def event_callback(event_name,bucket_name, object_key):
         if "ObjectCreated" in  event_name :
-            stime = time.time()
-            _FileService.download_file(bucket_name, object_name)
-            duration = time.time() - stime
+            upload_date_tag = f"ns0:upload-date:{datetime.date.today().isoformat()}"
+            tag_task = catalog_app.add_file_tags.s(tags=[upload_date_tag])
+            job = group(tag_task,tn_task)
+            # catalog_app.minio_fetch_file.apply_async((bucket_name,object_key,),link=tag_task)
+            catalog_app.minio_fetch_file.apply_async((bucket_name,object_key,),link=job)
             LOGGER.info(
-                f"Done {bucket_name=}, {object_name=}, {event_name=}, {duration=}")
+                f"Enqued {bucket_name=}, {object_key=}, {event_name=}")
         pass
     _ExchangeAgent = ExchangeAgent()
     _ExchangeAgent.begin(event_callback)

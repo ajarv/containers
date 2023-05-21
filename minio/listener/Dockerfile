@@ -6,15 +6,16 @@ RUN apk update \
     && pip install Pillow \
     && apk del build-deps
 
-RUN mkdir -p /usr/src/app
-WORKDIR /usr/src/app
+RUN mkdir -p /work
 
-COPY requirements.txt /usr/src/app/
-RUN pip install --no-cache-dir -r requirements.txt
+COPY requirements.txt /work/
+RUN pip install --no-cache-dir -r /work/requirements.txt
 
-COPY . /usr/src/app
+COPY . /work
+
+WORKDIR /work/src
 
 # Expose the Flask port
 EXPOSE 5000
 
-CMD [ "python", "./app.py" ]
+CMD [ "python", "./s3_event_listener.py" ]

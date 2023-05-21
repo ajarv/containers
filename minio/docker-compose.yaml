@@ -57,19 +57,19 @@ services:
   #     - ":9003"
   #     - --address
   #     -  ":9002"
-  minio-listener:
-    build: ./listener
-    image: minio-flask
-    user: root
-    environment:
-      TAG_SERVICE_HOST: "tag-manager"
-      TAG_SERVICE_PORT: "8000"
-      TAG_SERVICE_AUTH_TOKEN: "efdc792bcdaadc420d2c0ea680173b73d682c6d4"
-    ports:
-      - "5000:5000"
-    volumes:
-      - /mnt/ssd/data:/data
-      - /mnt/5tb/PhotoVault/vault:/data-out
+  # minio-listener:
+  #   build: ./listener
+  #   image: minio-flask
+  #   user: root
+  #   environment:
+  #     TAG_SERVICE_HOST: "tag-manager"
+  #     TAG_SERVICE_PORT: "8000"
+  #     TAG_SERVICE_AUTH_TOKEN: "efdc792bcdaadc420d2c0ea680173b73d682c6d4"
+  #   ports:
+  #     - "5000:5000"
+  #   volumes:
+  #     - /mnt/ssd/data:/data
+  #     - /mnt/5tb/PhotoVault/vault:/data-out
   upload-server:
     build: ./upload-server
     image: upload-server
@@ -116,11 +116,27 @@ services:
     ports:
         - 5672:5672
         - 15672:15672
-  async-tasks:
+  s3-listener:
     build: ../async-tasks
     image: async-tasks
     user: root
-    command: python src/rabbit_listener.py
+    command: python s3_event_listener.py
+    environment:
+      TAG_SERVICE_HOST: "tag-manager"
+      TAG_SERVICE_PORT: "8000"
+      TAG_SERVICE_AUTH_TOKEN: "efdc792bcdaadc420d2c0ea680173b73d682c6d4"
+      MINIO_HOST_PORT: "minio:9000"
+      MINIO_USERNAME: kalpa
+      MINIO_PASSWORD: rekongpeo
+      AMQP_HOSTNAME: "libra"
+    volumes:
+      - /mnt/ssd/data:/data
+      - /mnt/5tb/PhotoVault/vault:/data-out
+  celery-worker:
+    build: ../async-tasks
+    image: async-tasks
+    user: root
+    command: celery -A catalog_app worker  --loglevel=INFO
     environment:
       TAG_SERVICE_HOST: "tag-manager"
       TAG_SERVICE_PORT: "8000"
