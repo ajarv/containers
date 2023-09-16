@@ -1,0 +1,10 @@
+version: "3.7"
+services:
+  http-server:
+    image: halverneus/static-file-server:latest
+    environment:
+      CORS: "true"
+    ports:
+      - "8080:8080"
+    volumes:
+      - /home/ajar/music:/web

@@ -1,5 +1,4 @@
 version: "3.7"
-
 services:
   minio:
     image: quay.io/minio/minio
@@ -107,9 +106,11 @@ services:
       - "8000:8000"
     environment:
       - POSTGRES_HOST=db
-      - POSTGRES_NAME=postgres
-      - POSTGRES_USER=chandigarh
-      - POSTGRES_PASSWORD=chandigarh
+      # - POSTGRES_NAME=postgres
+      # - POSTGRES_USER=chandigarh
+      # - POSTGRES_PASSWORD=chandigarh
+    env_file:
+      - /home/ajar/workspace/y_resource_app/.env
   rabbitmq:
     image: rabbitmq:3.11-management
     container_name: 'rabbitmq'

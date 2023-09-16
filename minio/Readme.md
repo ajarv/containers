@@ -80,3 +80,6 @@ mc event list libra libra/images arn:aws:sqs::one:amqp
 mc admin config set libra notify_webhook:two queue_limit="0"  endpoint="http://minio-listener:5000/minio-event" queue_dir="/home/events"
 
 mc event add libra/images arn:minio:sqs::two:webhook --event put --suffix .JPG
+
+
+
