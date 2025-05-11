@@ -1,4 +1,15 @@
 
+```bash
+# install docker
+
+https://docs.docker.com/engine/install/ubuntu/
+
+
+
+
+```
+
+
 
 ```bash
 
