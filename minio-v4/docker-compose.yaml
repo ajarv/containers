@@ -1,0 +1,160 @@
+version: '3.7'
+
+# Settings and configurations that are common for all containers
+x-minio-common: &minio-common
+  image: quay.io/minio/minio:RELEASE.2023-06-02T23-17-26Z
+  command: server --console-address ":9001" http://minio{1...4}/data{1...2}
+  restart: always
+  environment:
+    MINIO_ROOT_USER: ${MINIO_ROOT_USER}
+    MINIO_ROOT_PASSWORD: ${MINIO_ROOT_PASSWORD}
+    MINIO_IDENTITY_OPENID_CONFIG_URL: "${MINIO_IDENTITY_OPENID_CONFIG_URL}"
+    MINIO_IDENTITY_OPENID_CLIENT_ID: "${MINIO_IDENTITY_OPENID_CLIENT_ID}"
+    MINIO_IDENTITY_OPENID_CLIENT_SECRET: "${MINIO_IDENTITY_OPENID_CLIENT_SECRET}"
+    MINIO_IDENTITY_OPENID_REDIRECT_URI: "${MINIO_IDENTITY_OPENID_REDIRECT_URI}"
+    MINIO_IDENTITY_OPENID_CLAIM_NAME: "${MINIO_IDENTITY_OPENID_CLAIM_NAME}"
+    MINIO_IDENTITY_OPENID_SCOPES: "groups,openid,email,profile"
+  healthcheck:
+    test: ["CMD", "curl", "-f", "http://localhost:9000/minio/health/live"]
+    interval: 30s
+    timeout: 20s
+    retries: 3
+  labels:
+    - traefik.enable=true
+    - traefik.http.routers.myminio.entrypoints=websecure
+    - traefik.http.routers.myminio.rule=Host(`s3.dev.anomili.com`)
+    - traefik.http.routers.myminio.service=myminio
+    - traefik.http.services.myminio.loadbalancer.server.port=9000
+    - traefik.http.routers.myminioadmin.entrypoints=websecure
+    - traefik.http.routers.myminioadmin.rule=Host(`minio.dev.anomili.com`)
+    - traefik.http.routers.myminioadmin.service=myminioadmin
+    - traefik.http.services.myminioadmin.loadbalancer.server.port=9001
+    - traefik.http.routers.thimpu_a.entrypoints=webminioadmin
+    - traefik.http.routers.thimpu_a.rule=ClientIP(`192.168.0.0/16`, `::1`)
+    - traefik.http.routers.thimpu_a.service=thimpu_a
+    - traefik.http.services.thimpu_a.loadbalancer.server.port=9001
+    - traefik.http.routers.thimpu_s3.entrypoints=webminio
+    - traefik.http.routers.thimpu_s3.rule=ClientIP(`192.168.0.0/16`, `::1`)
+    - traefik.http.routers.thimpu_s3.service=thimpu_a
+    - traefik.http.services.thimpu_s3.loadbalancer.server.port=9000
+
+# starts 4 docker containers running minio server instances.
+# using nginx reverse proxy, load balancing, you can access
+# it through port 9000.
+services:
+  traefik:
+    image: traefik:v2.10
+    ports:
+      - 80:80
+      - 443:443
+      - 5184:8080      
+      - 9001:9001
+      - 9000:9000     
+    hostname: minio
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - letsencrypt:/letsencrypt
+      - /var/log:/var/log
+    command:
+      - --api.dashboard=true
+      - --api.insecure=true
+      - --log.level=INFO
+      - --log.filepath=/var/log/traefik.log
+      - --accesslog=true
+      - --accesslog.filepath=/var/log/traefik-access.log
+      - --providers.docker.network=proxy
+      - --providers.docker.exposedByDefault=false
+      - --entrypoints.webminioadmin.address=:9001
+      - --entrypoints.webminio.address=:9000
+      - --entrypoints.web.address=:80
+      - --entrypoints.web.http.redirections.entrypoint.to=websecure
+      - --entryPoints.web.http.redirections.entrypoint.scheme=https
+      - --entrypoints.websecure.address=:443
+      #- --entrypoints.websecure.asDefault=true
+      - --entrypoints.websecure.http.tls.certresolver=myresolver
+      - --certificatesresolvers.myresolver.acme.email=${ACME_EMAIL:-ajarv@hotmail.com}
+      - --certificatesresolvers.myresolver.acme.tlschallenge=true
+      - --certificatesresolvers.myresolver.acme.storage=/letsencrypt/acme.json
+      #- --certificatesresolvers.myresolver.acme.caServer=https://acme-staging-v02.api.letsencrypt.org/directory
+
+  minio1:
+    <<: *minio-common
+    hostname: minio1
+    volumes:
+      - data1-1:/data1
+      - data1-2:/data2
+
+  minio2:
+    <<: *minio-common
+    hostname: minio2
+    volumes:
+      - data2-1:/data1
+      - data2-2:/data2
+
+  minio3:
+    <<: *minio-common
+    hostname: minio3
+    volumes:
+      - data3-1:/data1
+      - data3-2:/data2
+
+  minio4:
+    <<: *minio-common
+    hostname: minio4
+    volumes:
+      - data4-1:/data1
+      - data4-2:/data2
+
+## By default this config uses default local driver,
+## For custom volumes replace with volume driver configuration.
+volumes:
+  letsencrypt:
+    name: letsencrypt
+  data1-1:
+    driver: local
+    driver_opts:
+      o: bind
+      type: none
+      device: /mnt/sdb/data1-1 
+  data1-2:
+    driver: local
+    driver_opts:
+      o: bind
+      type: none
+      device: /mnt/sdc/data1-2 
+  data2-1:
+    driver: local
+    driver_opts:
+      o: bind
+      type: none
+      device: /mnt/sdb/data2-1 
+  data2-2:
+    driver: local
+    driver_opts:
+      o: bind
+      type: none
+      device: /mnt/sdc/data2-2 
+  data3-1:
+    driver: local
+    driver_opts:
+      o: bind
+      type: none
+      device: /mnt/sdb/data3-1 
+  data3-2:
+    driver: local
+    driver_opts:
+      o: bind
+      type: none
+      device: /mnt/sdc/data3-2 
+  data4-1:
+    driver: local
+    driver_opts:
+      o: bind
+      type: none
+      device: /mnt/sdb/data4-1 
+  data4-2:
+    driver: local
+    driver_opts:
+      o: bind
+      type: none
+      device: /mnt/sdc/data4-2 
