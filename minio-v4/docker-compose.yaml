@@ -1,6 +1,6 @@
 # Settings and configurations that are common for all containers
 x-minio-common: &minio-common
-  image: quay.io/minio/minio:RELEASE.2023-06-02T23-17-26Z
+  image: quay.io/minio/minio:RELEASE.2025-04-22T22-12-26Z-cpuv1
   command: server --console-address ":9001" http://minio{1...4}/data{1...2}
   restart: always
   environment:
